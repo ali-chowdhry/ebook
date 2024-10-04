@@ -244,12 +244,7 @@
                               <form class="form-material">
                                   <div class="form-group form-primary">
                                       <input type="text" name="footer-email" class="form-control" required="">
-                                      <span class="form-bar"></span>
-                                      <label class="float-label"><i class="fa fa-search m-r-10"></i>Search Friend</label>
-                                  </div>
-                              </form>
-                          </div>
-                          <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>
+                                      
                           <ul class="pcoded-item pcoded-left-item">
                               <li class="active">
                                   <a href="index.php" class="waves-effect waves-dark">
@@ -258,6 +253,73 @@
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                               </li>
+                              <br>
+
+                              <li class="active">
+                                  <a href="index.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Genre</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                              <br>
+                              <li class="active">
+                                  <a href="index.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Book</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                              <br>
+                              <li class="active">
+                                  <a href="index.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Author</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                              <br>
+                              <li class="active">
+                                  <a href="index.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Publisher</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                              <br>
+                              <li class="active">
+                                  <a href="index.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Website info</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                              <br>
+                              <li class="active">
+                                  <a href="index.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">About</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                              <br>
+                              <li class="active">
+                                  <a href="index.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Contact</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                              <br>
+                              <li class="active">
+                                  <a href="index.php" class="waves-effect waves-dark">
+                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">User</span>
+                                      <span class="pcoded-mcaret"></span>
+                                  </a>
+                              </li>
+                              <br>
+                              
                       </div>
                   </nav>
 

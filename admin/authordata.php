@@ -1,0 +1,9 @@
+<?php
+if(isset($_POST["btn"])){
+  $NAME=$_POST["Aname"];
+  $EMAIL=$_POST["email"]; 
+  $GENDER=$_POST["gender"]; 
+  $AGE=$_POST["age"];
+  $BOOK=$_POST["bname"];
+}
+?>

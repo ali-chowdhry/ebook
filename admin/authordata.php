@@ -13,14 +13,17 @@ $query= "INSERT INTO `author_info`( `Name`, `Email`, `Gender`, `Age`, `Book`)
  if(mysqli_query($con,$query)){
   echo "<script>
     alert('data saved successfullly');
-    window.location.href='student.html';
+    window.location.href='author.php';
     </script>";
  }else{
   echo "<script>
     alert('data not saved unsuccessfullly');
-    window.location.href='student.html';
+    window.location.href='author.php';
     </script>";
    }
 
  }
+ else{
+  header("location: author.php");
+ } 
 ?>

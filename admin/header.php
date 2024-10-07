@@ -1,3 +1,4 @@
+<?php include("../connection.php") ?>
 <title>Mega Able bootstrap admin template by codedthemes </title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -241,9 +242,9 @@
                               </div>
                           </div>
                           <div class="p-15 p-b-0">
-                              <form class="form-material">
+                              <div class="form-material">
                                   <div class="form-group form-primary">
-                                      <input type="text" name="footer-email" class="form-control" required="">
+                                     
                                       
                           <ul class="pcoded-item pcoded-left-item">
                               <li class="active">
@@ -256,9 +257,9 @@
                               <br>
 
                               <li class="active">
-                                  <a href="addcategory.php" class="waves-effect waves-dark">
+                                  <a href="showcategory.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Genre</span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Category</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                               </li>

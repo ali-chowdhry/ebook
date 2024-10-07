@@ -22,19 +22,49 @@
         <input type="text" name="email" placeholder="enter author email" required class="form-control">
         <br>
         <p>Author gender</p>
-        <input type="radio" value="gender" name="male" reqiured>Male 
-        <input type="radio" value="gender" name="female" reqiured>Female
+        <input type="radio" value="male" name="gender" reqiured>Male 
+        <input type="radio" value="female" name="gender" reqiured>Female
         <br><br>
         <p>Author Age</p>
         <input type="number" name="age" placeholder="enter author age" required class="form-control">
         <br>
-        <p>Book Name</p>
-        <input type="text" name="bname" placeholder="enter book name" required class="form-control">
-        <br>
         <button type="submit" name="btn" class="btn btn-primary">Submit</button>
-        
+    </form>
+</div>
+
 
         <?php include "footer.php"; ?>
+        <?php
+
+if(isset($_POST["btn"])){
+  $NAME=$_POST["Aname"];
+  $EMAIL=$_POST["email"]; 
+  $GENDER=$_POST["gender"]; 
+  $AGE=$_POST["age"];
+
+
+
+$query= "INSERT INTO `author_info`( `Name`, `Email`, `Gender`, `Age`)
+ VALUES (' $NAME',' $EMAIL','$GENDER','$AGE')";
+ if(mysqli_query($conn,$query)){
+  echo "<script>
+    alert('data saved successfullly');
+   
+    </script>";
+ }else{
+  echo "<script>
+    alert('data not saved unsuccessfullly');
+    
+    </script>";
+   }
+
+ }
+
+ 
+?>
+
+        
+
     
 </body>
 </html>

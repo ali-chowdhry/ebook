@@ -31,7 +31,7 @@
         echo "<tr>";
         echo "<td>".$row[0]."</td>";
         echo "<td>".$row[1]."</td>";
-        echo '<td><a href="updatecategory.php?update='.$row[0].'"><i class="bi bi-pencil-square"></i></a></td>';
+        echo '<td><a href="updatecategory.php?update='.$row[0].'"><button class="btn btn-primary">Update</button></a></td>';
         echo '<td><a href="deletecategory.php?delete='.$row[0].'"><i class="fa-solid fa-trash"></i></a></td>';
         echo "</tr>";
     }

@@ -6,13 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include "header.php"; ?>
+    <?php include "header.php";
+    
+$i = $_GET["update"];
+$query="SELECT * FROM category where CatID = $i";
+$result=mysqli_query($conn,$query);
+$row=mysqli_fetch_array($result);
+
+    ?>
     <div class="container">
         <br><br>
     <form action="" method="post">
     <h1>Update Category</h1>
     <label>Update category name:</label>
-    <input type="text" name="name" placeholder="Update your category name" class="form-control" required>
+    <input type="text" name="name" placeholder="Update your category name" class="form-control" value = <?php echo "$row[1]"; ?> required>
     <br>    
     <button type="submit" name="btn" class="btn btn-primary">Submit</button>
     </form>
@@ -21,17 +28,16 @@
 </body>
 </html>
 <?php
-include("../connection.php");
+if(isset($_POST["btn"])){
+$name = $_POST["name"];
 
-$i = $_GET["update"];
-
-$q = "UPDATE `category` WHERE CatID = $i";
+$q = "UPDATE `category` SET category_name='$name' WHERE CatID = $i";
 
 if(mysqli_query($conn, $q)){
     echo "
     <script>
     alert('Category updated successfully');
-    window.location.href='updatecategory.php'
+    window.location.href='showcategory.php'
     </script>
     ";
 } else {
@@ -42,6 +48,6 @@ if(mysqli_query($conn, $q)){
     </script>
     ";
 }
-
+}
 
 ?>

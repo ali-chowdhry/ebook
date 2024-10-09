@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2024 at 08:15 AM
+-- Generation Time: Oct 09, 2024 at 09:58 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -24,25 +24,46 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `publisher`
+-- Table structure for table `about_us`
 --
 
-CREATE TABLE `publisher` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `number` varchar(20) NOT NULL,
-  `address` varchar(50) NOT NULL
+CREATE TABLE `about_us` (
+  `AboutID` int(11) NOT NULL,
+  `Title` varchar(30) NOT NULL,
+  `Description` varchar(1000) NOT NULL,
+  `Record_insert` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `publisher`
+-- Dumping data for table `about_us`
 --
 
-INSERT INTO `publisher` (`id`, `name`, `number`, `address`) VALUES
-(1, 'adeel', '02356353', 'aptech'),
-(2, 'adeel', '02356353', 'aptech'),
-(3, 'adeel', '02356353', 'aptech'),
-(4, 'ali', '0123546', 'aptech');
+INSERT INTO `about_us` (`AboutID`, `Title`, `Description`, `Record_insert`) VALUES
+(3, '', 'saasddsadas', '2024-10-09 07:00:57'),
+(4, 'aaaa', 'ccccc', '2024-10-09 07:01:21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `CatID` int(11) NOT NULL,
+  `category_name` varchar(30) NOT NULL,
+  `record_insert` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`CatID`, `category_name`, `record_insert`) VALUES
+(2, 'Romantic', '2024-10-06 11:57:45'),
+(4, 'Drama', '2024-10-07 06:50:32'),
+(7, 'Horror', '2024-10-09 06:33:28'),
+(8, 'Fiction', '2024-10-09 06:33:37'),
+(9, 'Actions', '2024-10-09 07:05:45');
 
 -- --------------------------------------------------------
 
@@ -69,15 +90,43 @@ INSERT INTO `user` (`ID`, `Name`, `email`, `password`, `gender`, `address`, `pho
 (1, 'Adeen Shaikh', 'adeenshaikh342@gmail.com', 'tonystark', 'male', 'Nazimabad no.3 karachi', '3353472993', 'Admin'),
 (2, '', '', '', '', '', '', '');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `website_info`
+--
+
+CREATE TABLE `website_info` (
+  `ID` int(11) NOT NULL,
+  `Name` varchar(30) NOT NULL,
+  `Email` varchar(40) NOT NULL,
+  `Description` varchar(1000) NOT NULL,
+  `Address` varchar(50) NOT NULL,
+  `Phoneno` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `website_info`
+--
+
+INSERT INTO `website_info` (`ID`, `Name`, `Email`, `Description`, `Address`, `Phoneno`) VALUES
+(1, 'Bookbuzz', 'book_buzz333@gmail.com', 'Welcome to Bookbuzz, your one-stop destination for a world of knowledge! We specialize in a diverse range of informational books across various genres, including history, science, self-help, and more. Our curated selection features titles from renowned authors and emerging voices alike. Whether you\'re a student, a professional, or just a curious reader, you\'ll find the perfect resource to satisfy your thirst for knowledge.', 'North Nazimabad no2, Karachi', '03353472993');
+
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `publisher`
+-- Indexes for table `about_us`
 --
-ALTER TABLE `publisher`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `about_us`
+  ADD PRIMARY KEY (`AboutID`);
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`CatID`);
 
 --
 -- Indexes for table `user`
@@ -88,20 +137,40 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `phone` (`phone`);
 
 --
+-- Indexes for table `website_info`
+--
+ALTER TABLE `website_info`
+  ADD PRIMARY KEY (`Name`),
+  ADD UNIQUE KEY `ID` (`ID`),
+  ADD UNIQUE KEY `Email` (`Email`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `publisher`
+-- AUTO_INCREMENT for table `about_us`
 --
-ALTER TABLE `publisher`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `about_us`
+  MODIFY `AboutID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `CatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `website_info`
+--
+ALTER TABLE `website_info`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

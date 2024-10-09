@@ -16,26 +16,30 @@
     <br><br>
     <div class="container">
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <a href="addcategory.php"class="btn btn-primary">Insert</a>
+  <a href="addaboutus.php"class="btn btn-primary">Insert</a>
 </div>
     <br><br>
         <table class="table table-bordered">
             <tr>
             <th>ID</th>
-            <th>Name</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Record Insert</th>
             <th>Update</th>
             <th>Delete</th>
             </tr>
             <?php
-        $query="SELECT * FROM category";
+        $query="SELECT * FROM `about_us`";
         $result=mysqli_query($conn,$query);
         while($row=mysqli_fetch_array($result))
         {
         echo "<tr>";
         echo "<td>".$row[0]."</td>";
         echo "<td>".$row[1]."</td>";
-        echo '<td><a href="updatecategory.php?update='.$row[0].'"><i class="fa fa-solid fa-pencil" style="font-size: 21px;color: green;"></i></a></td>';
-        echo '<td><a href="deletecategory.php?delete='.$row[0].'"><i class="fa fa-solid fa-trash" style="font-size: 21px;color: red;"></i></a></td>';
+        echo "<td>".$row[2]."</td>";
+        echo "<td>".$row[3]."</td>";
+        echo '<td><a href="updateaboutus.php?update='.$row[0].'"><i class="fa fa-solid fa-pencil" style="font-size: 21px;color: green;"></i></a></td>';
+        echo '<td><a href="deleteaboutus.php?delete='.$row[0].'"><i class="fa fa-solid fa-trash" style="font-size: 21px;color: red;"></i></a></td>';
         echo "</tr>";
     }
     ?>

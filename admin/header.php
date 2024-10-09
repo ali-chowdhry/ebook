@@ -297,7 +297,7 @@
                               </li>
                               <br>
                               <li class="active">
-                                  <a href="index.php" class="waves-effect waves-dark">
+                                  <a href="showaboutus.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">About</span>
                                       <span class="pcoded-mcaret"></span>

@@ -35,7 +35,7 @@
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
         <!-- Pre-loader start -->
-  <div class="theme-loader">
+  <!-- <div class="theme-loader">
       <div class="loader-track">
           <div class="preloader-wrapper">
               <div class="spinner-layer spinner-blue">
@@ -86,7 +86,7 @@
               </div>
           </div>
       </div>
-  </div>
+  </div> -->
   <!-- Pre-loader end -->
   <div id="pcoded" class="pcoded">
       <div class="pcoded-overlay-box"></div>

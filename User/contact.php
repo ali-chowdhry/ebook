@@ -1,54 +1,52 @@
 <?php
 include("header.php");
-$query = "SELECT * FROM `website_info`";
 
 ?>
 
 <style>
-        
-        
-        header {
-            text-align: center;
-        }
-        .container {
-            padding: 40px;
- 
-        }
- 
-      
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        
-        .btn {
-            padding: 12px 30px;
-            background-color: black;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1em;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #d35400;
-        }
-    
-        iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
+    header {
+        text-align: center;
+    }
 
-    
-    </style>
+    .container {
+        padding: 40px;
+
+    }
+
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1em;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #d35400;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+</style>
 
 
 <header>
@@ -56,10 +54,10 @@ $query = "SELECT * FROM `website_info`";
 </header>
 
 <div class="container">
-    <h1>We'd love to hear from you</h1>
+    <h1>We'd love to hear from youkj</h1>
     <p>If you have any questions, suggestions, or issues, feel free to reach out to us by filling out the form below or using our contact details. We'll get back to you as soon as possible.</p>
 
-    <form action="your-backend-url" method="POST">
+    <form action="" method="POST">
         <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required>
@@ -75,9 +73,29 @@ $query = "SELECT * FROM `website_info`";
             <textarea id="message" name="message" required></textarea>
         </div>
 
-        <button type="submit" class="btn">Send Message</button>
+        <button type="submit" class="btn" name="btn">Send Message</button>
     </form>
 
+    <?php
+if (isset($_POST["btn"])) {
+    $Name = $_POST["name"];
+    $Email = $_POST["email"];
+    $Message = $_POST["message"];
+
+    $sql = "INSERT INTO `contact` (`Name`, `Email`, `Message`)
+     VALUES ('$Name', '$Email', '$Message')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "<script>
+        alert('message sent successfully!');
+        </script>";
+    } else {
+        echo "<script>
+        alert('message cannot be send!');
+        </script>";
+    }
+}
+?>
     <!-- Contact Info -->
     <div class="contact-info">
         <h2>Our Contact Information</h2>
@@ -93,6 +111,7 @@ $query = "SELECT * FROM `website_info`";
             allowfullscreen="" loading="lazy"></iframe>
     </div>
 </div>
+
 
 <?php
 include("footer.php");

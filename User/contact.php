@@ -1,6 +1,7 @@
 <?php
 include("header.php");
-$q = ""
+$query = "SELECT * FROM `website_info`";
+
 ?>
 
 <style>

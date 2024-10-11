@@ -36,8 +36,8 @@
         echo "<td>".$row[1]."</td>";
         echo "<td>".$row[2]."</td>";
         echo "<td>".$row[3]."</td>";
-        echo '<td><a href="updatePublisher.php?update='.$row[0].'"><button type="button" class="btn btn-primary">Update</button></a></td>';
-        echo '<td><a href="deletePublisher.php?delete='.$row[0].'"><button type="button" class="btn btn-danger">Delete</button></a></td>';
+        echo '<td><a href="updatePublisher.php?update='.$row[0].'"><i class="fa fa-solid fa-pencil" style="font-size: 21px;color: green;"></i></a></td>';
+        echo '<td><a href="deletePublisher.php?delete='.$row[0].'"><i class="fa fa-solid fa-trash" style="font-size: 21px;color: red;"></i></a></td>';
         echo "</tr>";
     }
     ?>

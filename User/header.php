@@ -105,7 +105,7 @@
 									<li class="menu-item"><a href="Featured.php" class="nav-link">Featured</a></li>
 									<li class="menu-item"><a href="Popular Books.php" class="nav-link">Popular</a></li>
 									<li class="menu-item"><a href="Books offer.php" class="nav-link">Offer</a></li>
-									<li class="menu-item"><a href="Articles.php" class="nav-link">Articles</a></li>
+									<li class="menu-item"><a href="Author.php" class="nav-link">Author</a></li>
 									<li class="menu-item"><a href="download.php" class="nav-link">Download App</a></li>
 								</ul>
 

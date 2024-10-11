@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2024 at 08:52 AM
+-- Generation Time: Oct 11, 2024 at 10:05 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -55,6 +55,17 @@ CREATE TABLE `author_info` (
   `Gender` varchar(6) NOT NULL,
   `Age` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `author_info`
+--
+
+INSERT INTO `author_info` (`id`, `Name`, `Email`, `Gender`, `Age`) VALUES
+(1, 'Kamila Shamsie', 'KamilaShamsie@gmail.com', 'female', 47),
+(2, 'Mohsin Hamid', 'MohsinHamid@gmail.com', 'male', 39),
+(3, 'Ahmad Nadeem Qasmi', 'AhmadNadeemQasmi@gmail.com', 'male', 50),
+(4, 'Bano Qudsia', 'BanoQudsia@gmail.com', 'female', 53),
+(5, 'Daud Kamal', 'DaudKamal@gmail.com', 'male', 49);
 
 -- --------------------------------------------------------
 
@@ -109,6 +120,13 @@ CREATE TABLE `publisher` (
   `number` varchar(15) NOT NULL,
   `Address` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `publisher`
+--
+
+INSERT INTO `publisher` (`id`, `name`, `number`, `Address`) VALUES
+(1, 'umer', '0987456123', 'aptech');
 
 -- --------------------------------------------------------
 
@@ -221,7 +239,7 @@ ALTER TABLE `about_us`
 -- AUTO_INCREMENT for table `author_info`
 --
 ALTER TABLE `author_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `book`
@@ -239,7 +257,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `publisher`
 --
 ALTER TABLE `publisher`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`

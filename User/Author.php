@@ -9,9 +9,9 @@ include("header.php");
 
 					<div class="section-header align-center">
 						<div class="title">
-							<span>Read our articles</span>
+							<span>Author</span>
 						</div>
-						<h2 class="section-title">Latest Articles</h2>
+						<h2 class="section-title">Latest Author</h2>
 					</div>
 
 					<div class="row">

@@ -1,6 +1,8 @@
 <?php
 include("header.php");
-$q = ""
+$query = "";
+$result= mysqli_query($conn,$query);
+$data= mysqli_fetch_array($result);
 ?>
 
 <style>
@@ -92,6 +94,16 @@ $q = ""
             allowfullscreen="" loading="lazy"></iframe>
     </div>
 </div>
+
+<?php
+if(isset($_POST["btn"])){
+    $Name=$_POST["name"];
+    $Email=$_POST["email"];
+    $Message=$_POST["message"];
+    
+
+}
+?>
 
 <?php
 include("footer.php");

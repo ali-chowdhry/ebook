@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2024 at 08:52 AM
+-- Generation Time: Oct 11, 2024 at 10:03 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -177,7 +177,10 @@ ALTER TABLE `author_info`
 -- Indexes for table `book`
 --
 ALTER TABLE `book`
-  ADD PRIMARY KEY (`BookID`);
+  ADD PRIMARY KEY (`BookID`),
+  ADD KEY `AuthorID` (`AuthorID`),
+  ADD KEY `CategoryID` (`CategoryID`),
+  ADD KEY `PublisherID` (`PublisherID`);
 
 --
 -- Indexes for table `category`
@@ -233,7 +236,7 @@ ALTER TABLE `book`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `CatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `CatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `publisher`
@@ -252,6 +255,18 @@ ALTER TABLE `user`
 --
 ALTER TABLE `website_info`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `book`
+--
+ALTER TABLE `book`
+  ADD CONSTRAINT `book_ibfk_1` FOREIGN KEY (`AuthorID`) REFERENCES `author_info` (`id`),
+  ADD CONSTRAINT `book_ibfk_2` FOREIGN KEY (`CategoryID`) REFERENCES `category` (`CatID`),
+  ADD CONSTRAINT `book_ibfk_3` FOREIGN KEY (`PublisherID`) REFERENCES `publisher` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

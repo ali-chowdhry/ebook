@@ -1,7 +1,8 @@
 <?php
 include("header.php");
-$query = "SELECT * FROM `website_info`";
-
+$query = "";
+$result= mysqli_query($conn,$query);
+$data= mysqli_fetch_array($result);
 ?>
 
 <style>
@@ -93,6 +94,16 @@ $query = "SELECT * FROM `website_info`";
             allowfullscreen="" loading="lazy"></iframe>
     </div>
 </div>
+
+<?php
+if(isset($_POST["btn"])){
+    $Name=$_POST["name"];
+    $Email=$_POST["email"];
+    $Message=$_POST["message"];
+    
+
+}
+?>
 
 <?php
 include("footer.php");

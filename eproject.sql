@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2024 at 09:58 AM
+-- Generation Time: Oct 11, 2024 at 08:52 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -45,6 +45,38 @@ INSERT INTO `about_us` (`AboutID`, `Title`, `Description`, `Record_insert`) VALU
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `author_info`
+--
+
+CREATE TABLE `author_info` (
+  `id` int(11) NOT NULL,
+  `Name` varchar(30) NOT NULL,
+  `Email` varchar(40) NOT NULL,
+  `Gender` varchar(6) NOT NULL,
+  `Age` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `book`
+--
+
+CREATE TABLE `book` (
+  `BookID` int(11) NOT NULL,
+  `Name` varchar(30) NOT NULL,
+  `AuthorID` int(11) NOT NULL,
+  `CategoryID` int(11) NOT NULL,
+  `Bookimage` varchar(50) NOT NULL,
+  `Bookprice` int(11) NOT NULL,
+  `Availability` varchar(10) NOT NULL,
+  `Rating` int(11) NOT NULL,
+  `PublisherID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `category`
 --
 
@@ -64,6 +96,19 @@ INSERT INTO `category` (`CatID`, `category_name`, `record_insert`) VALUES
 (7, 'Horror', '2024-10-09 06:33:28'),
 (8, 'Fiction', '2024-10-09 06:33:37'),
 (9, 'Actions', '2024-10-09 07:05:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `publisher`
+--
+
+CREATE TABLE `publisher` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `number` varchar(15) NOT NULL,
+  `Address` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -123,10 +168,28 @@ ALTER TABLE `about_us`
   ADD PRIMARY KEY (`AboutID`);
 
 --
+-- Indexes for table `author_info`
+--
+ALTER TABLE `author_info`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `book`
+--
+ALTER TABLE `book`
+  ADD PRIMARY KEY (`BookID`);
+
+--
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`CatID`);
+
+--
+-- Indexes for table `publisher`
+--
+ALTER TABLE `publisher`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
@@ -155,10 +218,28 @@ ALTER TABLE `about_us`
   MODIFY `AboutID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `author_info`
+--
+ALTER TABLE `author_info`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `book`
+--
+ALTER TABLE `book`
+  MODIFY `BookID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `CatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `publisher`
+--
+ALTER TABLE `publisher`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`

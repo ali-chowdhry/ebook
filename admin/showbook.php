@@ -33,19 +33,23 @@
             <th>DELELTE</th>
         </tr>
         <?php
-        $query="SELECT * FROM author_info";
+        $query="SELECT * FROM `book`";
         $result=mysqli_query($conn,$query);
         while($row=mysqli_fetch_array($result))
         {
+          $fetchcategory=mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM `category` WHERE `CatID`=$row[3]"));
+          $fetchpublisher=mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM `publisher` WHERE `ID`=$row[8]"));
+          $fetchauthor=mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM `author_info` WHERE `ID`=$row[2]"));
+
           echo"<tr>";
           echo"<td>".$row[0]."</td>"; 
           echo"<td>".$row[1]."</td>"; 
-          echo"<td>".$row[2]."</td>"; 
-          echo"<td>".$row[3]."</td>"; 
-          echo"<td>".$row[4]."</td>";
-          echo"<td>".$row[5]."</td>";  
+          echo"<td>".$fetchcategory[1]."</td>"; 
+          echo"<td>".$fetchpublisher[1]."</td>"; 
+          echo"<td>".$fetchauthor[1]."</td>";
+          echo"<td><img src='".$row[4]." ' height='100' width='100'></td>";  
+          echo"<td>".$row[5]."</td>";
           echo"<td>".$row[6]."</td>";
-          echo"<td>".$row[7]."</td>";
           echo"<td>".$row[8]."</td>";      
           echo'<td><a href="updatecategory.php?update='.$row[0].'"><i class="bi bi-pencil-square"</a></td>';
           echo'<td><a href="deletecategory.php?delete='.$row[0].'"><i class="bi bi-trash3-fill"</a></td>';

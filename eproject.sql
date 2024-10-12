@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2024 at 10:05 AM
+-- Generation Time: Oct 12, 2024 at 10:08 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -65,7 +65,8 @@ INSERT INTO `author_info` (`id`, `Name`, `Email`, `Gender`, `Age`) VALUES
 (2, 'Mohsin Hamid', 'MohsinHamid@gmail.com', 'male', 39),
 (3, 'Ahmad Nadeem Qasmi', 'AhmadNadeemQasmi@gmail.com', 'male', 50),
 (4, 'Bano Qudsia', 'BanoQudsia@gmail.com', 'female', 53),
-(5, 'Daud Kamal', 'DaudKamal@gmail.com', 'male', 49);
+(5, 'Daud Kamal', 'DaudKamal@gmail.com', 'male', 49),
+(6, '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -84,6 +85,14 @@ CREATE TABLE `book` (
   `Rating` int(11) NOT NULL,
   `PublisherID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `book`
+--
+
+INSERT INTO `book` (`BookID`, `Name`, `AuthorID`, `CategoryID`, `Bookimage`, `Bookprice`, `Availability`, `Rating`, `PublisherID`) VALUES
+(2, 'great expectation', 1, 7, '../Book Images/great-expectations.png', 400, 'yes', 1, 1),
+(4, 'Titanic', 4, 2, '../Book Images/Titanic.jfif', 500, 'yes', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -195,7 +204,11 @@ ALTER TABLE `author_info`
 -- Indexes for table `book`
 --
 ALTER TABLE `book`
-  ADD PRIMARY KEY (`BookID`);
+  ADD PRIMARY KEY (`BookID`),
+  ADD UNIQUE KEY `Name` (`Name`),
+  ADD KEY `AuthorID` (`AuthorID`),
+  ADD KEY `CategoryID` (`CategoryID`),
+  ADD KEY `PublisherID` (`PublisherID`);
 
 --
 -- Indexes for table `category`
@@ -239,13 +252,13 @@ ALTER TABLE `about_us`
 -- AUTO_INCREMENT for table `author_info`
 --
 ALTER TABLE `author_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
-  MODIFY `BookID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `BookID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -270,6 +283,18 @@ ALTER TABLE `user`
 --
 ALTER TABLE `website_info`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `book`
+--
+ALTER TABLE `book`
+  ADD CONSTRAINT `book_ibfk_1` FOREIGN KEY (`AuthorID`) REFERENCES `author_info` (`id`),
+  ADD CONSTRAINT `book_ibfk_2` FOREIGN KEY (`CategoryID`) REFERENCES `category` (`CatID`),
+  ADD CONSTRAINT `book_ibfk_3` FOREIGN KEY (`PublisherID`) REFERENCES `publisher` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

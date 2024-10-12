@@ -8,7 +8,7 @@
 <body>
     <?php include ("header.php"); ?>
     <div class="container">
-    <form action="" method="post">
+    <form action="" enctype="multipart/form-data" method="post">
     <label>Book Name:</label>
     <input type="text" name="bookname" placeholder="Enter your book name" class="form-control" required>
     <br>
@@ -65,9 +65,42 @@
        <option value="5">5</option> 
     </select>
     <br>
-
+    <button type="submit" name="btn" class="btn btn-primary">Submit</button>
     </form>
     </div>
     <?php include ("footer.php"); ?>
 </body>
 </html>
+<?php
+if(isset($_POST["btn"])){
+$Name = $_POST["bookname"];
+$Category = $_POST["bookcategory"];
+$Publisher = $_POST["bookpublisher"];
+$Author = $_POST["bookauthor"];
+$Image = $_FILES["pro_image"]["name"];
+$Path = $_FILES["pro_image"]["tmp_name"];
+$Folder = "../Book Images/".$Image;
+
+
+$Price = $_POST["bookprice"];
+$Availability = $_POST["availability"];
+$Rating = $_POST["rating"];
+
+$query = "INSERT INTO `book` (`Name`, `AuthorID`, `CategoryID`, `Bookimage`, `Bookprice`, `Availability`, `Rating`, `PublisherID`)
+ VALUES ('$Name', '$Author', '$Category', '$Folder', '$Price', '$Availability', '$Rating', '$Publisher')";
+
+ if(mysqli_query($conn,$query)){
+    move_uploaded_file($Path,$Folder);
+    echo "<script>
+    alert('New Book added');
+    </script>";
+ } else {
+    echo "
+    <script>
+    alert('Invalid credential');
+    </script>
+    ";
+ }
+
+}
+?>

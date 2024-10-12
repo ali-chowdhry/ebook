@@ -47,7 +47,7 @@
           echo"<td>".$fetchcategory[1]."</td>"; 
           echo"<td>".$fetchpublisher[1]."</td>"; 
           echo"<td>".$fetchauthor[1]."</td>";
-          echo"<td><img src='.$row[4].'></td>";  
+          echo"<td><img src='".$row[4]." ' height='100' width='100'></td>";  
           echo"<td>".$row[5]."</td>";
           echo"<td>".$row[6]."</td>";
           echo"<td>".$row[8]."</td>";      

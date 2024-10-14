@@ -34,6 +34,15 @@
       <!-- Style.css -->
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+      <style>
+        .pcoded-navbar {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 100vh; /* Ensure the sidebar doesn't exceed viewport height */
+}
+
+
+      </style>
+
         <!-- Pre-loader start -->
   <!-- <div class="theme-loader">
       <div class="loader-track">
@@ -258,7 +267,7 @@
 
                               <li class="active">
                                   <a href="showcategory.php" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-micon"><i class="ti-view-list"></i><b></b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">Category</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
@@ -266,7 +275,7 @@
                               <br>
                               <li class="active">
                                   <a href="showbook.php" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-micon"><i class="ti-agenda"></i><b></b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">Book</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
@@ -274,7 +283,7 @@
                               <br>
                               <li class="active">
                                   <a href="showauthor.php" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-micon"><i class="fa fa-user"></i><b></b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">Author</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
@@ -282,7 +291,7 @@
                               <br>
                               <li class="active">
                                   <a href="showpublisher.php" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-micon"><i class="fa fa-building"></i><b></b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">Publisher</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
@@ -290,7 +299,7 @@
                               <br>
                               <li class="active">
                                   <a href="index.php" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-micon"><i class="fa fa-info-circle"></i><b></b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">Website info</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
@@ -298,7 +307,7 @@
                               <br>
                               <li class="active">
                                   <a href="showaboutus.php" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-micon"><i class="fa fa-users"></i><b></b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">About</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
@@ -306,7 +315,7 @@
                               <br>
                               <li class="active">
                                   <a href="index.php" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-micon"><i class="fa fa-comments"></i><b></b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">Contact</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
@@ -314,7 +323,7 @@
                               <br>
                               <li class="active">
                                   <a href="index.php" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-home"></i><b></b></span>
+                                      <span class="pcoded-micon"><i class="fa fa-user-plus"></i><b></b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">User</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>

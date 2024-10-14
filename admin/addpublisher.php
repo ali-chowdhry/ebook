@@ -24,6 +24,9 @@
         <p>Publisher address</p>
         <input type="text" name="address" placeholder="enter publisher address" required class="form-control">
         <br>
+        <label>Select Image</label>
+     <input type="file" name="image" accept="image/*">
+    <br>
         <button type="submit" name="btn" class="btn btn-primary">Submit</button>
         
 
@@ -37,8 +40,11 @@ if(isset($_POST["btn"])) {
     $name = $_POST["name"] ;
     $number =$_POST["number"];
     $address =$_POST["address"];
-    $sql = "INSERT INTO `publisher`(`name`, `number`, `address`) VALUES ('$name','$number','$address')";
+    $image = $_FILES["image"];
+    $Path = $_FILES["image"];
+    $Folder = "../Publisher Images".$image;
 
+    $sql = "INSERT INTO `publisher`(`name`, `number`, `address`, `image`) VALUES ('$name','$number','$address','$image')";
 
 
     if(mysqli_query($conn, $sql)) {

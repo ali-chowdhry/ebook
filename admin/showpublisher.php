@@ -22,6 +22,7 @@
             <th>Name</th>
             <th>Number</th>
             <th>Address</th>
+            <th>Image</th>
             <th>Update</th>
             <th>Delete</th>
             </tr>
@@ -36,6 +37,7 @@
         echo "<td>".$row[1]."</td>";
         echo "<td>".$row[2]."</td>";
         echo "<td>".$row[3]."</td>";
+        echo"<td><img src='".$row[4]." ' height='100' width='100'></td>";  
         echo '<td><a href="updatePublisher.php?update='.$row[0].'"><i class="fa fa-solid fa-pencil" style="font-size: 21px;color: green;"></i></a></td>';
         echo '<td><a href="deletePublisher.php?delete='.$row[0].'"><i class="fa fa-solid fa-trash" style="font-size: 21px;color: red;"></i></a></td>';
         echo "</tr>";

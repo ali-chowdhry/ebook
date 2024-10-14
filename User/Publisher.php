@@ -27,13 +27,15 @@ include("header.php");
 
 								<figure>
 									<a href="#" class="image-hvr-effect">
-										<img src="" alt="post" class="post-image">
+										<img src="Name: <?php echo $data['image'];?>" alt="post" class="post-image">
 									</a>
 								</figure>
 
 								<div class="post-item">
-									<div class="meta-date">Mar 30, 2021</div>
-									<h3><a href="#">Reading books always makes the moments happy</a></h3>
+									<h2 class="meta-date">Name: <?php echo $data["name"];?></h2>
+									<h4><a href="#">Number:<?php echo $data["number"];?></a></h4>
+									<h4><a href="#">Address: <?php echo $data["address"];?></a></h4>
+
 
 
 								</div>

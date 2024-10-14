@@ -66,6 +66,7 @@ include("../connection.php")
 									<form role="search" method="get" class="search-box">
 										<input class="search-field text search-input" placeholder="Search"
 											type="search">
+											<button type="Submit" name="btn" class="btn btn-warning">Search</button>
 									</form>
 								</div>
 							</div>
@@ -109,7 +110,7 @@ include("../connection.php")
 									<li class="menu-item"><a href="Popular Books.php" class="nav-link">Popular</a></li>
 									<li class="menu-item"><a href="Books offer.php" class="nav-link">Offer</a></li>
 									<li class="menu-item"><a href="Author.php" class="nav-link">Author</a></li>
-									<li class="menu-item"><a href="download.php" class="nav-link">Download App</a></li>
+									<li class="menu-item"><a href="Publisher.php" class="nav-link">Publisher</a></li>
 								</ul>
 
 								<div class="hamburger">

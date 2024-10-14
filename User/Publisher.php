@@ -9,21 +9,21 @@ include("header.php");
 
 					<div class="section-header align-center">
 						<div class="title">
-							<span>Author</span>
+							<span>Publisher</span>
 						</div>
-						<h2 class="section-title">Latest Author</h2>
+						<h2 class="section-title">Latest Publisher</h2>
 					</div>
 
 					<div class="row">
 
 					<?php 
-						$fetch_query = mysqli_query($conn, "SELECT * FROM `Author_info`");
+						$fetch_query = mysqli_query($conn, "SELECT * FROM `publisher`");
 						while ($data = mysqli_fetch_array($fetch_query))
 						{ ?>
 
 		<div class="col-md-4">
 
-							<article class="column" data-aos="fade-up">
+							<Publisher class="column" data-aos="fade-up">
 
 								<figure>
 									<a href="#" class="image-hvr-effect">
@@ -37,7 +37,7 @@ include("header.php");
 
 
 								</div>
-							</article>
+							</Publisher>
 
 					
 					

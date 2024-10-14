@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2024 at 10:08 AM
+-- Generation Time: Oct 14, 2024 at 08:02 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -91,8 +91,13 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`BookID`, `Name`, `AuthorID`, `CategoryID`, `Bookimage`, `Bookprice`, `Availability`, `Rating`, `PublisherID`) VALUES
-(2, 'great expectation', 1, 7, '../Book Images/great-expectations.png', 400, 'yes', 1, 1),
-(4, 'Titanic', 4, 2, '../Book Images/Titanic.jfif', 500, 'yes', 4, 1);
+(4, 'Titanic', 4, 2, '../Book Images/Titanic.jfif', 500, 'yes', 4, 1),
+(6, 'Around the world in 80 days', 5, 10, '../Book Images/Around the world in 80 days.jpg', 320, 'yes', 5, 1),
+(7, 'Harry Potter', 5, 8, '../Book Images/harry potter.jfif', 200, 'yes', 4, 1),
+(8, 'the count of monte cristo', 2, 2, '../Book Images/the count of monte cristo.jfif', 800, 'yes', 3, 1),
+(9, 'the haunting of hill house', 3, 7, '../Book Images/the haunting of hill house.jfif', 470, 'yes', 4, 1),
+(10, 'the jungle book', 1, 11, '../Book Images/the jungle book.jpg', 430, 'yes', 2, 1),
+(11, 'The Trial', 4, 8, '../Book Images/the trial.jfif', 560, 'yes', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -115,7 +120,9 @@ INSERT INTO `category` (`CatID`, `category_name`, `record_insert`) VALUES
 (4, 'Drama', '2024-10-07 06:50:32'),
 (7, 'Horror', '2024-10-09 06:33:28'),
 (8, 'Fiction', '2024-10-09 06:33:37'),
-(9, 'Actions', '2024-10-09 07:05:45');
+(9, 'Actions', '2024-10-09 07:05:45'),
+(10, 'Adventure', '2024-10-13 19:43:21'),
+(11, 'Comedy', '2024-10-13 19:43:51');
 
 -- --------------------------------------------------------
 
@@ -258,13 +265,13 @@ ALTER TABLE `author_info`
 -- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
-  MODIFY `BookID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `BookID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `CatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `CatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `publisher`

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2024 at 08:02 AM
+-- Generation Time: Oct 14, 2024 at 03:48 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -132,17 +132,23 @@ INSERT INTO `category` (`CatID`, `category_name`, `record_insert`) VALUES
 
 CREATE TABLE `publisher` (
   `id` int(11) NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `number` varchar(15) NOT NULL,
-  `Address` varchar(40) NOT NULL
+  `name` varchar(50) NOT NULL,
+  `number` varchar(20) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `image` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `publisher`
 --
 
-INSERT INTO `publisher` (`id`, `name`, `number`, `Address`) VALUES
-(1, 'umer', '0987456123', 'aptech');
+INSERT INTO `publisher` (`id`, `name`, `number`, `address`, `image`) VALUES
+(1, 'John Wiley', '0123456789', 'aptech', 0),
+(2, 'John Wiley', '0231456789', 'aptech', 0),
+(3, 'John Wiley', '0215846554', 'aptech', 0),
+(4, 'John Wiley', '236654646', 'aptech', 0),
+(5, 'John Wiley', '0156556566', 'aptech', 0),
+(6, 'John Wiley', '5301654068', 'aptech', 0);
 
 -- --------------------------------------------------------
 
@@ -277,7 +283,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `publisher`
 --
 ALTER TABLE `publisher`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`

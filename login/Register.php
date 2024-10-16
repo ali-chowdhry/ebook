@@ -54,6 +54,38 @@
 
                                         </div>
 
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example22">Gender</label>
+                                            <br>
+                                            <input type="radio" name="gender" value="male" 
+                                                 />male
+
+                                                <input type="radio" name="gender" value="female"
+                                                 />female
+
+                                        </div>
+
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example22">Address</label>
+                                            <input type="text" name="password" id="form2Example22"
+                                                class="form-control" />
+
+                                        </div>
+
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example22">Phone</label>
+                                            <input type="text" name="password" id="form2Example22"
+                                                class="form-control" />
+
+                                        </div>
+
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example22">Role</label>
+                                            <input type="text" name="password" id="form2Example22"
+                                                class="form-control" />
+
+                                        </div>
+
                                         <div class="text-center pt-1 mb-5 pb-1">
                                             <button data-mdb-button-init data-mdb-ripple-init name="loginbtn"
                                                 class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"

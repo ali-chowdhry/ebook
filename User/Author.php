@@ -1,6 +1,7 @@
 <?php
 include("header.php");
 ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <section id="latest-blog" class="py-5 my-5">
 		<div class="container">
@@ -17,27 +18,28 @@ include("header.php");
 					<div class="row">
 
 					<?php 
-						$fetch_query = mysqli_query($conn, "SELECT * FROM `Author_info`");
+						$fetch_query = mysqli_query($conn, "SELECT * FROM `author_info`");
 						while ($data = mysqli_fetch_array($fetch_query))
 						{ ?>
 
 		<div class="col-md-4">
 
-							<article class="column" data-aos="fade-up">
+							<Publisher class="column" data-aos="fade-up">
 
 								<figure>
 									<a href="#" class="image-hvr-effect">
-										<img src="" alt="post" class="post-image">
+										<img src="../Author Images\image (1).png" alt="post" class="post-image">
 									</a>
 								</figure>
 
 								<div class="post-item">
-									<div class="meta-date">Mar 30, 2021</div>
-									<h3><a href="#">Reading books always makes the moments happy</a></h3>
+									<h2 class="meta-date"><i class="fas fa-user"></i> <?php echo $data["Name"];?></h2>
+									<h4><a href="mailto:<?php echo $data["Email"];?>">  <i class="fas fa-envelope icon"></i> <?php echo $data["Email"];?></a></h4>
+
 
 
 								</div>
-							</article>
+							</Publisher>
 
 					
 					

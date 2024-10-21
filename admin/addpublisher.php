@@ -37,8 +37,8 @@ if(isset($_POST["btn"])) {
     $name = $_POST["name"] ;
     $number =$_POST["number"];
     $address =$_POST["address"];
-    $sql = "INSERT INTO `publisher`(`name`, `number`, `address`) VALUES ('$name','$number','$address')";
 
+    $sql = "INSERT INTO `publisher`(`name`, `number`, `address`) VALUES ('$name','$number','$address')";
 
 
     if(mysqli_query($conn, $sql)) {

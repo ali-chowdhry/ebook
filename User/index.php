@@ -17,9 +17,7 @@ include("header.php");
 						<div class="slider-item">
 							<div class="banner-content">
 								<h2 class="banner-title">Life of the Wild</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero
-									ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis
-									urna, a eu.</p>
+								<p>"Life of the Wild" often refers to the rich and intricate tapestry of interactions and behaviors among animals in their natural habitats. It showcases the beauty and brutality of nature, highlighting the struggle for survival, the complexities of ecosystems, and the delicate balance between various species.</p>
 								<div class="btn-wrap">
 									<a href="#" class="btn btn-outline-accent btn-accent-arrow">Read More<i
 											class="icon icon-ns-arrow-right"></i></a>

@@ -96,22 +96,24 @@ if (isset($_POST["btn"])) {
     }
 }
 ?>
+	<?php
+        $query="SELECT * FROM website_info order by id desc limit 1";
+        $result=mysqli_query($conn,$query);
+        while($row=mysqli_fetch_array($result))
+        { ?>
     <!-- Contact Info -->
     <div class="contact-info">
         <h2>Our Contact Information</h2>
-        <p><strong>Email:</strong><a href="mailto:alichowdhryaptech@gmail.com">alichowdhryaptech@gmail.com</a></p>
+        <p><a href="mailto:<?php echo $row[1]; ?>"><?php echo $row[2]; ?></a></p>
 
-        <p><strong>Phone:</strong><a href="tel:+92 03312345814">+92 03312345814</a></p>
+        <p><a href="tel:<?php echo $row[1]; ?>"><?php echo $row[5]; ?></a></p>
 
-        <p><strong>Address:</strong><i class="fas fa-map-marker-alt"></i>123 eBook St, Knowledge City, Bookland, BL 45678</p>
+        <p><i class="fas fa-map-marker-alt"></i><?php echo $row[4]; ?>8</p>
 
-        <!-- Google Maps Iframe (Replace src with your location) -->
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509487!2d144.95592831542215!3d-37.81720997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c4da37f1a7b9!2sKnowledge%20City!5e0!3m2!1sen!2s!4v1644447842731!5m2!1sen!2s"
-            allowfullscreen="" loading="lazy"></iframe>
+ 
     </div>
 </div>
-
+<?php } ?>
 
 <?php
 include("footer.php");

@@ -1,41 +1,46 @@
 <?php
 include("header.php");
 ?>
-<section>
-<div class="container">
-    <h1>Welcome to Our Books Website</h1>
-    <p>
-        We are passionate about making knowledge and entertainment accessible to everyone. Our platform offers a vast collection of eBooks across various genres, including fiction, non-fiction, academic, self-help, and more. Whether you’re looking to dive into a gripping novel, learn a new skill, or explore scholarly works, you’ll find something that piques your interest here.
-    </p>
+ <div class="page-title light-background">
+      <div class="container">
+        <h1>About</h1>
+      
+      </div>
+    </div><!-- End Page Title -->
 
-    <h2>Our Mission</h2>
-    <p>
-        Our mission is to provide an easy and affordable way for readers around the world to access high-quality eBooks. We believe in the power of reading to educate, inspire, and transform lives, and we are committed to offering a diverse and inclusive selection of books to cater to readers of all ages and backgrounds.
-    </p>
+    <!-- Services 2 Section -->
+    <section id="services-2" class="services-2 section">
 
-    <h2>What We Offer</h2>
-    <p>
-        Our website offers a variety of features designed to enhance your reading experience, including:
-        <ul>
-            <li>An extensive library of eBooks</li>
-            <li>User-friendly browsing and search tools</li>
-            <li>Regularly updated new releases and recommendations</li>
-            <li>Discounts, promotions, and special offers</li>
-        </ul>
-    </p>
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-up">
+  
+          <div class="col-md-12 col-lg-6 ps-lg-5">
+            <div class="row">
+            <?php
+                $query = "SELECT * FROM `about_us`";
+                $result = mysqli_query($conn, $query);
+                while ($row = mysqli_fetch_array($result)) { ?>
+ 
+             
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="services-item" data-aos="fade-up" data-aos-delay="">
+                  <div class="services-icon">
+                    <i class="bi bi-search"></i>
+                  </div>
+                  <div>
+                    <h3><?php echo $row[1]; ?></h3>
+                    <p><?php echo $row[2]; ?></p>
+                  </div>
+                </div>
+              </div>
+              <?php } ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Services 2 Section -->
 
-    <h2>Join Us</h2>
-    <p>
-        Become a part of our growing community of readers. Sign up today to explore our collection and start your reading journey with us.
-    </p>
 
-    <h2>Contact Us</h2>
-    <p>
-        Have questions or feedback? We’d love to hear from you! Reach out to our support team at <a href="mailto:support@ebookswebsite.com">support@ebookswebsite.com</a>.
-    </p>
-</div>
-</section>
 <?php
 include("footer.php");
 ?>
-

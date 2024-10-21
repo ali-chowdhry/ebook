@@ -1,137 +1,97 @@
 <?php
 include("header.php");
 ?>
+  <!-- Page Title -->
+  <div class="page-title light-background">
+      <div class="container">
+        <h1>Team</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Team</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
 
-<section id="latest-blog" class="py-5 my-5">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
+    <!-- Team Section -->
+    <section id="team" class="team section">
 
-					<div class="section-header align-center">
-						<div class="title">
-							<span>Author</span>
-						</div>
-						<h2 class="section-title">Latest Author</h2>
-					</div>
+      <div class="site-section slider-team-wrap">
+        <div class="container">
 
-					<div class="row">
+          <div class="slider-nav d-flex justify-content-end mb-3">
+            <a href="#" class="js-prev js-custom-prev"><i class="bi bi-arrow-left-short"></i></a>
+            <a href="#" class="js-next js-custom-next"><i class="bi bi-arrow-right-short"></i></a>
+          </div>
 
-						<div class="col-md-4">
+          <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "1",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "navigation": {
+                  "nextEl": ".js-custom-next",
+                  "prevEl": ".js-custom-prev"
+                },
+                "breakpoints": {
+                  "640": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 30
+                  },
+                  "768": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 30
+                  },
+                  "1200": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 30
+                  }
+                }
+              }
+            </script> 
+			 <div class="swiper-wrapper">
+			<?php
+        $query="SELECT * FROM author_info order by id desc";
+        $result=mysqli_query($conn,$query);
+        while($row=mysqli_fetch_array($result))
+        { ?>
+          
+              <div class="swiper-slide">
+                <div class="team">
+                  <div class="pic">
+                    <img src="assets/img/team/team-1.jpg" alt="Image" class="img-fluid">
+                  </div>
+                  <h3 clas="">
+                    <a href="#"><span class=""><?php echo $row[1]; ?></a>
+                  </h3>
+                  <span class="d-block position"><?php echo $row[2]; ?></span>
+                 
+                  <p class="mb-0">
+                    <a href="#" class="more dark">Learn More <span class="bi bi-arrow-right-short"></span></a>
+                  </p>
+                </div>
+              </div>
+			
+			
+              <!-- <div class="swiper-slide"></div> -->
+            <?php } ?>
+			</div> 
+          </div>
+        </div>
+        <!-- /.container -->
+      </div>
+    </section><!-- /Team Section -->
 
-							<article class="column" data-aos="fade-up">
-
-								<figure>
-									<a href="#" class="image-hvr-effect">
-										<img src="images/post-img1.jpg" alt="post" class="post-image">
-									</a>
-								</figure>
-
-								<div class="post-item">
-									<div class="meta-date">Mar 30, 2021</div>
-									<h3><a href="#">Reading books always makes the moments happy</a></h3>
-
-									<div class="links-element">
-										<div class="categories">inspiration</div>
-										<div class="social-links">
-											<ul>
-												<li>
-													<a href="#"><i class="icon icon-facebook"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="icon icon-twitter"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="icon icon-behance-square"></i></a>
-												</li>
-											</ul>
-										</div>
-									</div><!--links-element-->
-
-								</div>
-							</article>
-
-						</div>
-						<div class="col-md-4">
-
-							<article class="column" data-aos="fade-up" data-aos-delay="200">
-								<figure>
-									<a href="#" class="image-hvr-effect">
-										<img src="images/post-img2.jpg" alt="post" class="post-image">
-									</a>
-								</figure>
-								<div class="post-item">
-									<div class="meta-date">Mar 29, 2021</div>
-									<h3><a href="#">Reading books always makes the moments happy</a></h3>
-
-									<div class="links-element">
-										<div class="categories">inspiration</div>
-										<div class="social-links">
-											<ul>
-												<li>
-													<a href="#"><i class="icon icon-facebook"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="icon icon-twitter"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="icon icon-behance-square"></i></a>
-												</li>
-											</ul>
-										</div>
-									</div><!--links-element-->
-
-								</div>
-							</article>
-
-						</div>
-						<div class="col-md-4">
-
-							<article class="column" data-aos="fade-up" data-aos-delay="400">
-								<figure>
-									<a href="#" class="image-hvr-effect">
-										<img src="images/post-img3.jpg" alt="post" class="post-image">
-									</a>
-								</figure>
-								<div class="post-item">
-									<div class="meta-date">Feb 27, 2021</div>
-									<h3><a href="#">Reading books always makes the moments happy</a></h3>
-
-									<div class="links-element">
-										<div class="categories">inspiration</div>
-										<div class="social-links">
-											<ul>
-												<li>
-													<a href="#"><i class="icon icon-facebook"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="icon icon-twitter"></i></a>
-												</li>
-												<li>
-													<a href="#"><i class="icon icon-behance-square"></i></a>
-												</li>
-											</ul>
-										</div>
-									</div><!--links-element-->
-
-								</div>
-							</article>
-
-						</div>
-
-					</div>
-
-					<div class="row">
-
-						<div class="btn-wrap align-center">
-							<a href="#" class="btn btn-outline-accent btn-accent-arrow" tabindex="0">Read All Articles<i
-									class="icon icon-ns-arrow-right"></i></a>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
 
 <?php
 include("footer.php")

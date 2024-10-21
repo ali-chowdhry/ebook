@@ -51,8 +51,8 @@
           echo"<td>".$row[5]."</td>";
           echo"<td>".$row[6]."</td>";
           echo"<td>".$row[8]."</td>";      
-          echo'<td><a href="updatecategory.php?update='.$row[0].'"><i class="bi bi-pencil-square"</a></td>';
-          echo'<td><a href="deletecategory.php?delete='.$row[0].'"><i class="bi bi-trash3-fill"</a></td>';
+          echo'<td><a href="updatebook.php?update='.$row[0].'"><i class="fa fa-solid fa-pencil" style="font-size: 21px;color: green;"></i></a></td>';
+          echo'<td><a href="deletebook.php?delete='.$row[0].'"><i class="fa fa-solid fa-trash" style="font-size: 21px;color: red;"></i></a></td>';
         }
 
         ?>

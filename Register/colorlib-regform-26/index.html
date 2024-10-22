@@ -1,4 +1,3 @@
-<?php include("../connection.php"); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -53,30 +52,3 @@
 		<script src="js/main.js"></script>
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
-<?php
-session_start();
-if (isset($_POST["loginbtn"])) {
-    $email = $_POST["email"];
-    $pass = $_POST["password"];
-
-    $login = "SELECT * FROM `user` WHERE Email = '$email' and password = '$pass' and Role = 'Admin'";
-    $run = mysqli_query($conn, $login);
-
-    if (mysqli_num_rows($run) == 1) {
-        $data = mysqli_fetch_array($run);
-        $_SESSION["id"] = $data[0];
-        $_SESSION["name"] = $data[1];
-        $_SESSION["email"] = $data[2];
-
-        echo "<script>alert('Login successfully');
-            window.location.href='../admin/index.php'
-        </script>";
-
-    } else {
-        echo "<script>alert('Invalid credentials')</script>";
-    }
-}
-
-?>
-
-

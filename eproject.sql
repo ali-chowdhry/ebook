@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2024 at 10:34 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Oct 22, 2024 at 09:44 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -83,21 +83,22 @@ CREATE TABLE `book` (
   `Bookprice` int(11) NOT NULL,
   `Availability` varchar(10) NOT NULL,
   `Rating` int(11) NOT NULL,
-  `PublisherID` int(11) NOT NULL
+  `PublisherID` int(11) NOT NULL,
+  `Description` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `book`
 --
 
-INSERT INTO `book` (`BookID`, `Name`, `AuthorID`, `CategoryID`, `Bookimage`, `Bookprice`, `Availability`, `Rating`, `PublisherID`) VALUES
-(4, 'Titanic', 4, 2, '../Book Images/Titanic.jfif', 500, 'yes', 4, 1),
-(6, 'Around the world in 80 days', 5, 10, '../Book Images/Around the world in 80 days.jpg', 320, 'yes', 5, 1),
-(7, 'Harry Potter', 5, 8, '../Book Images/harry potter.jfif', 200, 'yes', 4, 1),
-(8, 'the count of monte cristo', 2, 2, '../Book Images/the count of monte cristo.jfif', 800, 'yes', 3, 1),
-(9, 'the haunting of hill house', 3, 7, '../Book Images/the haunting of hill house.jfif', 470, 'yes', 4, 1),
-(10, 'the jungle book', 1, 11, '../Book Images/the jungle book.jpg', 430, 'yes', 2, 1),
-(11, 'The Trial', 4, 8, '../Book Images/the trial.jfif', 560, 'yes', 1, 1);
+INSERT INTO `book` (`BookID`, `Name`, `AuthorID`, `CategoryID`, `Bookimage`, `Bookprice`, `Availability`, `Rating`, `PublisherID`, `Description`) VALUES
+(4, 'Titanic', 4, 2, '../Book Images/Titanic.jfif', 500, 'yes', 4, 1, 'Margaret Anne dreams of leaving the orphanage behind, and she can hardly believe her luck when she is chosen to accompany wealth Mrs Carstairs aboard the great Titanic. But when the passengers are woken on a freezing night in April 1912, she finds herself caught up in an unimaginable nightmare…'),
+(6, 'Around the world in 80 days', 5, 10, '../Book Images/Around the world in 80 days.jpg', 320, 'yes', 5, 1, ''),
+(7, 'Harry Potter', 5, 8, '../Book Images/harry potter.jfif', 200, 'yes', 4, 1, ''),
+(8, 'the count of monte cristo', 2, 2, '../Book Images/the count of monte cristo.jfif', 800, 'yes', 3, 1, ''),
+(9, 'the haunting of hill house', 3, 7, '../Book Images/the haunting of hill house.jfif', 470, 'yes', 4, 1, ''),
+(10, 'the jungle book', 1, 11, '../Book Images/the jungle book.jpg', 430, 'yes', 2, 1, ''),
+(11, 'The Trial', 4, 8, '../Book Images/the trial.jfif', 560, 'yes', 1, 1, '');
 
 -- --------------------------------------------------------
 
@@ -286,7 +287,7 @@ ALTER TABLE `author_info`
 -- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
-  MODIFY `BookID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `BookID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `category`

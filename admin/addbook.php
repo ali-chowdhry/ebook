@@ -65,6 +65,9 @@
        <option value="5">5</option> 
     </select>
     <br>
+    <label>Description</label>
+    <input type="text" name="description" placeholder="Enter your description" class="form-control">
+    <br>
     <button type="submit" name="btn" class="btn btn-primary">Submit</button>
     </form>
     </div>
@@ -77,6 +80,7 @@ $Name = $_POST["bookname"];
 $Category = $_POST["bookcategory"];
 $Publisher = $_POST["bookpublisher"];
 $Author = $_POST["bookauthor"];
+$Description = $_POST["description"];
 $Image = $_FILES["pro_image"]["name"];
 $Path = $_FILES["pro_image"]["tmp_name"];
 $Folder = "../Book Images/".$Image;
@@ -86,8 +90,8 @@ $Price = $_POST["bookprice"];
 $Availability = $_POST["availability"];
 $Rating = $_POST["rating"];
 
-$query = "INSERT INTO `book` (`Name`, `AuthorID`, `CategoryID`, `Bookimage`, `Bookprice`, `Availability`, `Rating`, `PublisherID`)
- VALUES ('$Name', '$Author', '$Category', '$Folder', '$Price', '$Availability', '$Rating', '$Publisher')";
+$query = "INSERT INTO `book` (`Name`, `AuthorID`, `CategoryID`, `Bookimage`, `Bookprice`, `Availability`, `Rating`, `PublisherID`, `Description`)
+ VALUES ('$Name', '$Author', '$Category', '$Folder', '$Price', '$Availability', '$Rating', '$Publisher', '$Description')";
 
  if(mysqli_query($conn,$query)){
     move_uploaded_file($Path,$Folder);

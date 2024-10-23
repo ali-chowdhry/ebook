@@ -29,6 +29,7 @@
             <th>Price</th>
             <th>Availability</th>
             <th>Rating</th>
+            <th>Description</th>
             <th>UPDATE</th>
             <th>DELELTE</th>
         </tr>
@@ -50,7 +51,8 @@
           echo"<td><img src='".$row[4]." ' height='100' width='100'></td>";  
           echo"<td>".$row[5]."</td>";
           echo"<td>".$row[6]."</td>";
-          echo"<td>".$row[8]."</td>";      
+          echo"<td>".$row[8]."</td>";
+          echo"<td class='text-wrap'>".$row[9]."</td>";      
           echo'<td><a href="updatebook.php?update='.$row[0].'"><i class="fa fa-solid fa-pencil" style="font-size: 21px;color: green;"></i></a></td>';
           echo'<td><a href="deletebook.php?delete='.$row[0].'"><i class="fa fa-solid fa-trash" style="font-size: 21px;color: red;"></i></a></td>';
         }

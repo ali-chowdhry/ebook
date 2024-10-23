@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2024 at 09:59 AM
+-- Generation Time: Oct 23, 2024 at 07:25 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -61,12 +61,11 @@ CREATE TABLE `author_info` (
 --
 
 INSERT INTO `author_info` (`id`, `Name`, `Email`, `Gender`, `Age`) VALUES
-(1, 'Kamila Shamsie', 'KamilaShamsie@gmail.com', 'female', 47),
-(2, 'Mohsin Hamid', 'MohsinHamid@gmail.com', 'male', 39),
-(3, 'Ahmad Nadeem Qasmi', 'AhmadNadeemQasmi@gmail.com', 'male', 50),
-(4, 'Bano Qudsia', 'BanoQudsia@gmail.com', 'female', 53),
-(5, 'Daud Kamal', 'DaudKamal@gmail.com', 'male', 49),
-(6, '', '', '', 0);
+(1, 'Jane Austen', 'JaneAusten@gmail.com', 'female', 47),
+(2, 'Charles Dickens', 'CharlesDickens@gmail.com', 'male', 39),
+(3, 'George Orwell', 'GeorgeOrwell@gmail.com', 'male', 50),
+(4, 'J. K. Rowling', 'J. K.Rowling@gmail.com', 'female', 53),
+(5, 'Ruskin Bond', 'RuskinBond@gmail.com', 'male', 49);
 
 -- --------------------------------------------------------
 

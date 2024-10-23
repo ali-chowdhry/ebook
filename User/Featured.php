@@ -55,16 +55,28 @@ include("header.php");
 				
 				?></div>
 <section id="featured-books" class="py-5 my-5">
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
     
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                5
 		<div class="container">
 			<div class="row">
 				
 				<div class="col-md-12">
 
-
+                <div class="product-list" data-aos="fade-up">
+                    <div class="row">
+                        <?php 
+                        // Prepare the query based on search input
+                        $search = isset($_GET['Search']) ? mysqli_real_escape_string($conn, $_GET['Search']) : '';
+                        $fetch_query = "SELECT * FROM `book`" . ($search ? " WHERE Name LIKE '%$search%'" : "");
+                        $result = mysqli_query($conn, $fetch_query);
+                    ?>
                 <div class="product-list" data-aos="fade-up">
                     <div class="row">
                         <?php 
@@ -102,6 +114,7 @@ include("header.php");
             </div>
         </div>
     </section>
+<!-- 
 					<div class="product-list" data-aos="fade-up">
 						<div class="row">
 						<?php 
@@ -122,11 +135,11 @@ include("header.php");
 								</div>
 							</div> 
 
-							<?php } ?>
+							<?php } ?> -->
 
 
 
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-md-12">
 
 					<div class="btn-wrap align-right">
@@ -135,9 +148,10 @@ include("header.php");
 					</div>
 
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</section>
+
     <?php
     include("footer.php");
     ?>

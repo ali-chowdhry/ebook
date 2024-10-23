@@ -1,6 +1,7 @@
 <?php
 include("header.php");
 ?>
+
   <!-- Page Title -->
   <div class="page-title light-background">
       <div class="container">
@@ -14,6 +15,8 @@ include("header.php");
       </div>
     </div><!-- End Page Title -->
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <!-- Team Section -->
     <section id="team" class="team section">
 
@@ -24,6 +27,7 @@ include("header.php");
             <a href="#" class="js-prev js-custom-prev"><i class="bi bi-arrow-left-short"></i></a>
             <a href="#" class="js-next js-custom-next"><i class="bi bi-arrow-right-short"></i></a>
           </div>
+
 
           <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
             <script type="application/json" class="swiper-config">
@@ -82,7 +86,6 @@ include("header.php");
                 </div>
               </div>
 			
-			
               <!-- <div class="swiper-slide"></div> -->
             <?php } ?>
 			</div> 
@@ -92,6 +95,43 @@ include("header.php");
       </div>
     </section><!-- /Team Section -->
 
+					<?php 
+						$fetch_query = mysqli_query($conn, "SELECT * FROM `author_info`");
+						while ($data = mysqli_fetch_array($fetch_query))
+						{ ?>
+
+		<div class="col-md-4">
+
+							<Publisher class="column" data-aos="fade-up">
+
+								<figure>
+									<a href="#" class="image-hvr-effect">
+										<img src="../Author Images\image (1).png" alt="post" class="post-image">
+									</a>
+								</figure>
+
+								<div class="post-item">
+									<h2 class="meta-date"><i class="fas fa-user"></i> <?php echo $data["Name"];?></h2>
+									<h4><a href="mailto:<?php echo $data["Email"];?>">  <i class="fas fa-envelope icon"></i> <?php echo $data["Email"];?></a></h4>
+
+
+
+								</div>
+							</Publisher>
+
+					
+					
+							</div>
+				
+
+					<?php } ?>
+
+				
+
+				</div>
+			</div>
+		</div>
+	</section>
 
 <?php
 include("footer.php")

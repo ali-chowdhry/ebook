@@ -1,12 +1,7 @@
 <?php
 include("header.php");
 ?>
- <div class="page-title light-background">
-      <div class="container">
-        <h1>About</h1>
-      
-      </div>
-    </div><!-- End Page Title -->
+ 
 
     <!-- Services 2 Section -->
     <section id="services-2" class="services-2 section">

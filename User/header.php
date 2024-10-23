@@ -30,6 +30,8 @@ session_start();
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 </head>
 <body class="index-page">
@@ -40,7 +42,7 @@ session_start();
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Active.</h1>
+        <h1 ><a href="index.php">Books Store</a></h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -69,7 +71,11 @@ session_start();
             </ul>
           </li>
           <li><a href="contact.php">Contact</a></li>
+
+          <li><a href="cart.php"> <i class="fas fa-shopping-cart"></i></a></li>
+
         </ul>
+
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 

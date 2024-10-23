@@ -1,74 +1,154 @@
 <?php
 include("header.php");
 ?>
-	</div><!--header-wrap-->
 
-	<section id="billboard">
+<style>
+	.slider{
+    width: 1300px;
+    max-width: 100vw;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.slider .list img{
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+@media screen and (max-width: 768px){
+    .slider{
+        height: 400px;
+    }
+}
+</style>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
+<div class="slider">
+    <div class="list">
+        <div class="item">
+            <img src="../Book Images\cover pic1.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="../Book Images\cover pic2.png" alt="">
+        </div>
+        <div class="item">
+            <img src="../Book Images\cover pic3.png" alt="">
+        </div>
+        <div class="item">
+            <img src="../Book Images\cover pic4.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="../Book Images\cover pic5.jpg" alt="">
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="prev"><</button>
+        <button id="next">></button>
+    </div>
+    <ul class="dots">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
 
-					<button class="prev slick-arrow">
-						<i class="icon icon-arrow-left"></i>
-					</button>
+<script>
+let slider = document.querySelector('.slider .list');
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let dots = document.querySelectorAll('.slider .dots li');
 
-					<div class="main-slider pattern-overlay">
-						<div class="slider-item">
-							<div class="banner-content">
-								<h2 class="banner-title">Life of the Wild</h2>
-								<p>"Life of the Wild" often refers to the rich and intricate tapestry of interactions and behaviors among animals in their natural habitats. It showcases the beauty and brutality of nature, highlighting the struggle for survival, the complexities of ecosystems, and the delicate balance between various species.</p>
-								<div class="btn-wrap">
-									<a href="#" class="btn btn-outline-accent btn-accent-arrow">Read More<i
-											class="icon icon-ns-arrow-right"></i></a>
-								</div>
-							</div><!--banner-content-->
-							<img src="images/main-banner1.jpg" alt="banner" class="banner-image">
-						</div><!--slider-item-->
+let lengthItems = items.length - 1;
+let active = 0;
 
-						<div class="slider-item">
-							<div class="banner-content">
-								<h2 class="banner-title">Birds gonna be Happy</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero
-									ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis
-									urna, a eu.</p>
-								<div class="btn-wrap">
-									<a href="#" class="btn btn-outline-accent btn-accent-arrow">Read More<i
-											class="icon icon-ns-arrow-right"></i></a>
-								</div>
-							</div><!--banner-content-->
-							<img src="images/main-banner2.jpg" alt="banner" class="banner-image">
-						</div><!--slider-item-->
+next.onclick = function(){
+    active = active + 1 <= lengthItems ? active + 1 : 0;
+    reloadSlider();
+}
+prev.onclick = function(){
+    active = active - 1 >= 0 ? active - 1 : lengthItems;
+    reloadSlider();
+}
 
-					</div><!--slider-->
+let refreshInterval = setInterval(()=> {next.click()}, 3000);
 
-					<button class="next slick-arrow">
-						<i class="icon icon-arrow-right"></i>
-					</button>
+function reloadSlider(){
+    console.log('Active index:', active);
+    slider.style.left = -items[active].offsetLeft + 'px';
+    
+    let last_active_dot = document.querySelector('.slider .dots li.active');
+    last_active_dot.classList.remove('active');
+    dots[active].classList.add('active');
 
-				</div>
-			</div>
-		</div>
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(()=> {next.click()}, 3000);
+}
 
-	</section>
+dots.forEach((li, key) => {
+    li.addEventListener('click', ()=> {
+        active = key;
+        reloadSlider();
+    })
+})
 
-	<section id="client-holder" data-aos="fade-up">
-		<div class="container">
-			<div class="row">
-				<div class="inner-content">
-					<div class="logo-wrap">
-						<div class="grid">
-							<a href="#"><img src="images/client-image1.png" alt="client"></a>
-							<a href="#"><img src="images/client-image2.png" alt="client"></a>
-							<a href="#"><img src="images/client-image3.png" alt="client"></a>
-							<a href="#"><img src="images/client-image4.png" alt="client"></a>
-							<a href="#"><img src="images/client-image5.png" alt="client"></a>
-						</div>
-					</div><!--image-holder-->
-				</div>
-			</div>
-		</div>
-	</section>
+window.onresize = function(event) {
+    reloadSlider();
+};
+</script>
 
 
 	<section id="best-selling" class="leaf-pattern-overlay">
@@ -80,9 +160,9 @@ include("header.php");
 
 					<div class="row">
 
-						<div class="col-md-6">
+						<div class="col-md-8">
 							<figure class="products-thumb">
-								<img src="images/single-image.jpg" alt="book" class="single-image">
+								<img src="../Book Images/Around the world in 80 days.jpg" alt="book" class="single-image">
 							</figure>
 						</div>
 

@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Oct 21, 2024 at 10:16 AM
-=======
--- Generation Time: Oct 16, 2024 at 10:24 AM
->>>>>>> 26b5ac32f33838b11ebd7a2aabbd2609eda2ed2b
+-- Generation Time: Oct 23, 2024 at 10:05 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -176,7 +172,12 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`ID`, `Name`, `email`, `password`, `gender`, `address`, `phone`, `Role`) VALUES
 (1, 'Adeen Shaikh', 'adeenshaikh342@gmail.com', 'tonystark', 'male', 'Nazimabad no.3 karachi', '3353472993', 'Admin'),
-(2, '', '', '', '', '', '', '');
+(2, '', '', '', '', '', '', ''),
+(8, 'zaidan', 'zaidanabrar@gmail.com', '123456', 'male', 'tussss', '4436466', ''),
+(9, 'imran khan', 'anees@gmail.com', '111111', 'male', 'rizvia', '6487545484984', ''),
+(12, 'yaseen', 'yk@gmail.com', '111111', 'female', 'wah', '11111111111', ''),
+(21, 'zaidan', 'abdullahasif123@outlook.com', '111111', 'male', 'rizvia', '648754548656', ''),
+(23, 'yaseen', 'yaseen@gmail.com', '111111', 'male', 'tussss', '12345612345', '');
 
 -- --------------------------------------------------------
 
@@ -292,7 +293,7 @@ ALTER TABLE `publisher`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `website_info`

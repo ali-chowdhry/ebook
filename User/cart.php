@@ -75,7 +75,7 @@
 									</td>
 									<td> Rs. <?php echo $data[5]; ?></td>
 									<td>
-									  <?php echo  $_SESSION["qty"][$i]; ?>
+									  <?php echo $_SESSION ["qty"][$i]; ?>
 				  
 									</td>
 									<td>Rs. <?php echo $data[5] * $_SESSION["qty"][$i] ?></td>
@@ -109,7 +109,7 @@
                   <div class="row mb-5">
                     
                     <div class="col-md-6">
-                      <a class="btn btn-outline-black btn-sm btn-block" href="Featured.php">Continue Shopping</a>
+                      <a class="btn btn-success" href="Featured.php">Continue Shopping</a>
                     </div>
                   </div>            
                 </div>
@@ -151,7 +151,7 @@
         
                       <div class="row">
                         <div class="col-md-12">
-                          <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='checkout.php'">Proceed To Checkout</button>
+                          <button class="btn btn-secondary btn-lg py-3 btn-block" onclick="window.location='checkout.php'">Proceed To Checkout</button>
                         </div>
                       </div>
                     </div>
@@ -160,7 +160,7 @@
               </div>
             </div>
           </div>
-		
+		<br> 
 		  <?php include "footer.php" ?>
 
 	</body>

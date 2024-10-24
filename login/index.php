@@ -93,7 +93,7 @@ if (isset($_POST["loginbtn"])) {
     if (mysqli_num_rows($run) == 1) {
         $data = mysqli_fetch_array($run);
         $_SESSION["id"] = $data[0];
-        $_SESSION["name"] = $data[1];
+        $_SESSION["uname"] = $data[1];
         $_SESSION["email"] = $data[2];
 
         echo "<script>alert('Login successfully');

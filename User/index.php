@@ -9,10 +9,7 @@ include("header.php");
 			<div class="row">
 				<div class="col-md-12">
 
-					<button class="prev slick-arrow">
-						<i class="icon icon-arrow-left"></i>
-					</button>
-
+				
 					<div class="main-slider pattern-overlay">
 						<div class="slider-item">
 							<div class="banner-content">

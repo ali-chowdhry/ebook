@@ -56,8 +56,8 @@
 
                                         <div class="d-flex align-items-center justify-content-center pb-4">
                                             <p class="mb-0 me-2">Don't have an account?</p>
-                                            <button type="button" data-mdb-button-init data-mdb-ripple-init
-                                                class="btn btn-outline-danger">Create new</button>
+                                            <a href="../Register/register.php" data-mdb-button-init data-mdb-ripple-init
+                                                class="btn btn-outline-danger">Create new</a>
                                         </div>
 
                                     </form>
@@ -90,6 +90,9 @@ if (isset($_POST["loginbtn"])) {
     $login = "SELECT * FROM `user` WHERE Email = '$email' and password = '$pass' and Role = 'Admin'";
     $run = mysqli_query($conn, $login);
 
+    $login_user = "SELECT * FROM `user` WHERE Email = '$email' and password = '$pass' and Role = 'User'";
+    $run_user = mysqli_query($conn, $login_user);
+
     if (mysqli_num_rows($run) == 1) {
         $data = mysqli_fetch_array($run);
         $_SESSION["id"] = $data[0];
@@ -100,7 +103,19 @@ if (isset($_POST["loginbtn"])) {
             window.location.href='../admin/index.php'
         </script>";
 
-    } else {
+    }
+   else if(mysqli_num_rows($run_user) == 1) {
+        $data = mysqli_fetch_array($run_user);
+        $_SESSION["id"] = $data[0];
+        $_SESSION["username"] = $data[1];
+        $_SESSION["useremail"] = $data[2];
+
+        echo "<script>alert('Login successfully');
+            window.location.href='../user/index.php'
+        </script>";
+
+    }
+    else {
         echo "<script>alert('Invalid credentials')</script>";
     }
 }

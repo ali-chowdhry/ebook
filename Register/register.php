@@ -22,29 +22,30 @@
 					<h3>New Account?</h3>
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="text" name="uname" class="form-control" placeholder="Username">
+						<input type="text" name="uname" class="form-control" placeholder="Username" pattern="^[a-zA-Z][a-zA-Z]*$" required>
 					</div>
 					<div class="form-holder">
 						<span class="lnr lnr-phone-handset"></span>
-						<input type="text" name="phoneno" class="form-control" placeholder="Phone Number">
+						<input type="text" name="phoneno" class="form-control" placeholder="Phone Number" pattern="^0307-\d{7}$" required>
 					</div>
 					<div class="form-holder">
 						<span class="lnr lnr-envelope"></span>
-						<input type="text" name="email" class="form-control" placeholder="Email">
+						<input type="text" name="email" class="form-control" placeholder="Email" required>
 					</div>
 					<div class="form-holder">
 						<span class="lnr lnr-home"></span>
-						<input type="text" name="add" class="form-control" placeholder="Address">
+						<input type="text" name="add" class="form-control" placeholder="Address" required>
 					</div>
 					<span class="label-input100">Gender</span>
-                        <select name="Gen" class="form-control" id="">
+                        <select name="Gen" class="form-control" id="" required>
                          <option value="male">Male</option> 
                          <option value="female">Female</option>   
                         </select>
 						<br><br>
 					<div class="form-holder">
-						<span class="lnr lnr-user"></span>
-						<input type="password" name="pass" class="form-control" placeholder=" Password">
+						<span class="lnr lnr-eye"></span>
+						<input type="password" name="pass" class="form-control" placeholder=" Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
+               required>
 					</div>
 					<button type="submit" name="btn">
 						<span>Register</span>

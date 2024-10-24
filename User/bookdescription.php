@@ -14,6 +14,8 @@
             height: 500px;
             border-radius: 5px;
             margin-left: 50px;
+            height: auto;
+            border-radius: 5px;
         }
         .item-price {
             font-size: 1.5em;
@@ -62,13 +64,31 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="<?php echo htmlspecialchars($a['Bookimage']); ?>" alt="Book Cover" class="product-item"> 
+                            <img src="<?php echo htmlspecialchars($a['Bookimage']); ?>" height="311px" width="400px"; alt="Book Cover" class="product-item"> 
                         </div>
                         <div class="col-md-6">
                             <h3 class="book-title"><?php echo htmlspecialchars($a['Name']); ?></h3>
-                            <span class="book-author">by <?php 
+                            <span class="book-author"><h5>Author:</h5> <?php 
                             $author= mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM `author_info` where id = $a[2]"));
+                            echo $author[1];0?></span>
+
+                
+                            <br>    
+                            <span class="book-publisher"><h5>Publisher:</h5> <?php 
+                            $author= mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM `publisher` where id = $a[8]"));
                             echo $author[1];?></span>
+                            <br>
+                            <span class="book-description">
+                                <h5>Book Description:</h5>
+                            <?php echo htmlspecialchars($a['Description']); ?>
+                            </span>
+                            <br>
+                            <span class="book-availability">
+                                <h5>Availability:</h5>
+                            <?php echo htmlspecialchars($a['Availability']); ?>
+                            </span>
+                            
+
                             <div class="item-price">Rs.<?php echo number_format($a['Bookprice'], 2); ?></div>
                             <form action="addtocart.php" method="POST" class="mt-4"> 
                                 <input type="hidden" name="pro_id" value="<?php echo htmlspecialchars($a['BookID']); ?>">

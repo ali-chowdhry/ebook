@@ -301,9 +301,9 @@ session_start()
                               </li>
                               <br>
                               <li class="active">
-                                  <a href="index.php" class="waves-effect waves-dark">
+                                  <a href="showorder.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="fa fa-info-circle"></i><b></b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Website info</span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Show Order</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                               </li>
@@ -317,7 +317,7 @@ session_start()
                               </li>
                               <br>
                               <li class="active">
-                                  <a href="index.php" class="waves-effect waves-dark">
+                                  <a href="showcontact.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="fa fa-comments"></i><b></b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">Contact</span>
                                       <span class="pcoded-mcaret"></span>

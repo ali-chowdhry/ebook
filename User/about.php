@@ -1,7 +1,10 @@
-<?php
+``<?php
 include("header.php");
 ?>
  <div class="page-title light-background">
+
+ <div class="page-title light-background" >
+
       <div class="container">
         <h1>About</h1>
       
@@ -20,8 +23,8 @@ include("header.php");
                 $query = "SELECT * FROM `about_us`";
                 $result = mysqli_query($conn, $query);
                 while ($row = mysqli_fetch_array($result)) { ?>
- 
-             
+
+          
               <div class="col-6 col-sm-6 col-md-6 col-lg-6">
                 <div class="services-item" data-aos="fade-up" data-aos-delay="">
                   <div class="services-icon">

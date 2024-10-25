@@ -3,9 +3,19 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Oct 22, 2024 at 09:44 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
+=======
+<<<<<<< HEAD
+-- Generation Time: Oct 21, 2024 at 10:16 AM
+=======
+-- Generation Time: Oct 16, 2024 at 10:24 AM
+>>>>>>> 26b5ac32f33838b11ebd7a2aabbd2609eda2ed2b
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
+>>>>>>> 860d28faab50408ba3adbc46b6ac7b9735ec44c5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,8 +49,8 @@ CREATE TABLE `about_us` (
 --
 
 INSERT INTO `about_us` (`AboutID`, `Title`, `Description`, `Record_insert`) VALUES
-(3, '', 'saasddsadas', '2024-10-09 07:00:57'),
-(4, 'aaaa', 'ccccc', '2024-10-09 07:01:21');
+(6, 'Book Haven', 'Discover your next favorite read in our curated collection of genres, author spotlights, and literary discussions.', '2024-10-21 07:48:22'),
+(7, 'The Written Word', 'Dive into the world of literature with book reviews, author interviews, and a vibrant community of readers.', '2024-10-21 07:49:13');
 
 -- --------------------------------------------------------
 
@@ -275,7 +285,7 @@ ALTER TABLE `website_info`
 -- AUTO_INCREMENT for table `about_us`
 --
 ALTER TABLE `about_us`
-  MODIFY `AboutID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `AboutID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `author_info`

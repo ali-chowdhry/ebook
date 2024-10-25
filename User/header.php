@@ -69,11 +69,13 @@ session_start();
             </ul>
           </li>
           <li><a href="contact.php">Contact</a></li>
+          <li><a href="cart.php"><i class="bi bi-cart" ></i></a></li>
+          
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
+
     </div>
   </header>
-  
   <main class="main">

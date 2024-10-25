@@ -14,6 +14,8 @@
             height: 500px;
             border-radius: 5px;
             margin-left: 50px;
+            height: auto;
+            border-radius: 5px;
         }
         .item-price {
             font-size: 1.5em;
@@ -69,6 +71,15 @@
                             <span class="book-author">by <?php 
                             $author= mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM `author_info` where id = $a[2]"));
                             echo $author[1];?></span>
+
+                            <span class="book-author">by <?php echo htmlspecialchars($a['AuthorID']); ?></span>
+                            <br>    
+                            <span class="book-publisher">by <?php 
+                            $author= mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM `publisher` where id = $a[8]"));
+                            echo $author[1];?></span>
+
+                            <span class="book-publisher">by <?php echo htmlspecialchars($a['PublisherID']); ?></span>
+
                             <div class="item-price">Rs.<?php echo number_format($a['Bookprice'], 2); ?></div>
                             <form action="addtocart.php" method="POST" class="mt-4"> 
                                 <input type="hidden" name="pro_id" value="<?php echo htmlspecialchars($a['BookID']); ?>">

@@ -1,18 +1,6 @@
 <?php
 include("header.php");
 ?>
-  <!-- Page Title -->
-  <div class="page-title light-background">
-      <div class="container">
-        <h1>Team</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Team</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
 
     <!-- Team Section -->
     <section id="team" class="team section">
@@ -69,7 +57,7 @@ include("header.php");
               <div class="swiper-slide">
                 <div class="team">
                   <div class="pic">
-                    <img src="assets/img/team/team-1.jpg" alt="Image" class="img-fluid">
+                    <img src="../Publisher Images\pic1.jpg" alt="Image" class="img-fluid">
                   </div>
                   <h3 clas="">
                     <a href="#"><span class=""><?php echo $row[1]; ?></a>

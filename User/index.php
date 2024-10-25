@@ -93,7 +93,7 @@ include("header.php");
 <div class="slider">
         <div class="list">
             <div class="item">
-                <img src="../Book Images\cover pic1.jpg" alt="">
+                <img src="../Book Images\cover pic1.jfif" alt="">
             </div>
             <div class="item">
                 <img src="../Book Images\cover pic2.png" alt="">

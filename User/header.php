@@ -30,8 +30,6 @@ session_start();
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 
 </head>
 <body class="index-page">
@@ -42,7 +40,7 @@ session_start();
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 ><a href="index.php">Books Store</a></h1>
+        <h1 class="sitename">Active.</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -53,38 +51,39 @@ session_start();
           <li><a href="Author.php">Author</a></li>
           <li><a href="Publisher.php">Publisher</a></li>
        
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
-          <li><a href="contact.php">Contact</a></li>
-
-          <li><a href="cart.php"> <i class="fas fa-cart"></i></a></li>
-          <?php 
-          if(isset($_SESSION["username"])){ ?>
-          <li><a href="#"><?php echo $_SESSION["username"]; ?></a></li>
-          <li><a href="logout.php"><i class="fa fa-sign-out"></i></a></li>
-        <?php }else{?>  
-
-          <li><a href="../login/index.php"> <i class="fa-solid fa-user"></i></a></li>
+          <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+         <?php
           
-        
-          <?php } ?>  
-        </ul>
+          $fetch_query = "SELECT * FROM `category`";
+          $result = mysqli_query($conn, $fetch_query);
+          if ($result) {
+            while ($row = mysqli_fetch_array($result)) {
+          ?>
+         
+              <li><a href="#"><?php echo $row[1]; ?></a></li>
+              
+           
+            <?php 
+          }
+        } else {
+          echo "<p>No books found.</p>";
+        }
+          ?>
+           </ul>
+          <li><a href="contact.php">Contact</a></li>
+          <li><a href="cart.php"><i class="bi bi-cart" height="50px" width="20px"; ></i></a></li>
+          <?php
+            if(isset($_SESSION["username"])){ ?>
+               <li><a href="#"><?php echo $_SESSION["username"]?></a></li>
+          <li><a href="logout.php"><i class="bi bi-box-arrow-left" height="50px" width="20px"; ></i></a></li>
+ <?php     }
+else{ ?>
+          <li><a href="../login/index.php"><i class="bi bi-box-arrow-in-right" height="50px" width="20px"; ></i></a></li>
 
+<?php }
+          ?>
+        </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 

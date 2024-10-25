@@ -25,11 +25,11 @@
         while($row=mysqli_fetch_array($result))
         {
         echo "<tr>";
-        echo "<td>".$row[0]."</td>";
-        echo "<td>".$row[1]."</td>";
-        echo "<td>".$row[2]."</td>";
-        echo "<td>".$row[3]."</td>";
-        echo "<td>".$row[4]."</td>";
+        ("../user/checkout.php"); echo "<td>".$row[0]."</td>";
+        ("../user/checkout.php");echo "<td>".$row[1]."</td>";
+        ("../user/checkout.php");echo "<td>".$row[2]."</td>";
+        ("../user/placeorder.php"); echo "<td>".$row[3]."</td>";
+        ("../user/placeorder.php");echo "<td>".$row[4]."</td>";
         echo "</tr>";
     }
     ?>

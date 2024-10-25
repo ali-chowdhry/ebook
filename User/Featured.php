@@ -63,7 +63,7 @@ include("header.php");
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                5
+                
 		<div class="container">
 			<div class="row">
 				
@@ -107,7 +107,6 @@ include("header.php");
                 <div class="row">
                     <div class="col-md-12">
                         <div class="btn-wrap align-right">
-                            <a href="#" class="btn-accent-arrow">View all products <i class="icon icon-ns-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

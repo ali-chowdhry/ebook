@@ -72,7 +72,7 @@ session_start();
           </li> -->
           <li><a href="contact.php">Contact</a></li>
 
-          <li><a href="cart.php"> <i class="fas fa-cart"></i></a></li>
+          <li><a href="cart.php"> <i class="fas fa-shopping-cart"></i></a></li>
           <?php 
           if(isset($_SESSION["username"])){ ?>
           <li><a href="#"><?php echo $_SESSION["username"]; ?></a></li>

@@ -19,7 +19,7 @@
         <input type="text" name="name" placeholder="enter publisher name" required class="form-control">
         <br>
         <p>Publisher number</p>
-        <input type="number" name="number" placeholder="enter publisher number" required class="form-control">
+        <input type="number" name="number" placeholder="enter publisher number"  pattern="^0-\d{7}$" required class="form-control">
         <br>
         <p>Publisher address</p>
         <input type="text" name="address" placeholder="enter publisher address" required class="form-control">

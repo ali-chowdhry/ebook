@@ -180,7 +180,8 @@ include("header.php");
         $Email = $_POST["email"];
         $Message = $_POST["message"];
 
-        $sql = "INSERT INTO `contact` (`Name`, `Email`, `Message`) VALUES ('$Name', '$Email', '$Message')";
+        $sql = "INSERT INTO `contact`( `Name`, `Email`, `Message`)
+         VALUES ('$Name','$Email','$Message')";
 
         if (mysqli_query($conn, $sql)) {
             echo "<script>alert('Message sent successfully!');</script>";

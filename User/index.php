@@ -211,6 +211,7 @@ window.onresize = function(event) {
   <?php } ?>
 </div>
 <br>
+
 <h1 style="text-align: center; color: green;">Category</h1>
 <div class="publisher-container">
   <?php

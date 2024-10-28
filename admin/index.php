@@ -9,7 +9,7 @@
 
   <?php
   include("header.php");
-  session_start()
+  
   ?>
                         <div class="pcoded-inner-content">
                             <!-- Main-body start -->
@@ -216,10 +216,6 @@
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
-<<<<<<< HEAD
-                                                               
-                                                               
-=======
                                                                 <tr>
                                                                     <td>
                                                                         <div class="chk-option">
@@ -236,7 +232,7 @@
                                                                             <img src="assets/images/avatar-4.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
                                                                             <div class="d-inline-block">
                                                                                 <h6><?php $q= "SELECT * FROM `user` WHERE 1";
-                                                                                    echo ".$a[1].";
+                                                                                    echo ".$q[1].";
                                                                                 ?></h6>
                                                                                 <p class="text-muted m-b-0">Graphics Designer</p>
                                                                             </div>
@@ -294,7 +290,6 @@
                                                                     <td>Aug, 02</td>
                                                                     <td class="text-right"><label class="label label-success">medium</label></td>
                                                                 </tr>
->>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
                                                                 <tr>
                                                                     <td>
                                                                         <div class="chk-option">

@@ -26,7 +26,7 @@ include("../connection.php"); ?>
                                 <div class="card-body p-md-5 mx-md-4">
 
                                     <div class="text-center">
-                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                                        <img src="../Book Images\Logo.png"
                                             style="width: 185px;" alt="logo">
                                         <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
                                     </div>
@@ -69,11 +69,7 @@ include("../connection.php"); ?>
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                                 <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                                     <h4 class="mb-4">We are more than just a company</h4>
-                                    <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                        do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p class="small mb-0">Log in to explore a world of books, connect with your favorite publishers, and stay updated on the latest releases. With your BookBuzz account, you can manage your preferences, save favorite books, and discover exclusive content tailored just for you. Don’t miss out—sign in now to get the best of BookBuzz!</p>
                                 </div>
                             </div>
                         </div>

@@ -30,13 +30,9 @@ session_start();
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
->>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
->>>>>>> 645a841c6e25683356b618d0feda7cf7fa909f6e
+
 
 </head>
 <body class="index-page">
@@ -44,19 +40,11 @@ session_start();
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-<<<<<<< HEAD
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Active.</h1>
-      </a>
-=======
     <a href="index.php">
     <img src="../Book Images\Logo.png" alt="" width="150" height="150"> 
     <h1><a href="index.php">Books Store</a></h1>
 </a>
 
->>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -66,28 +54,6 @@ session_start();
           <li><a href="Author.php">Author</a></li>
           <li><a href="Publisher.php">Publisher</a></li>
        
-<<<<<<< HEAD
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.php">Contact</a></li>
-          <li><a href="cart.php"><i class="bi bi-cart" ></i></a></li>
-          
-=======
           <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
          
@@ -123,7 +89,6 @@ else{ ?>
 
 <?php }
           ?>
->>>>>>> 645a841c6e25683356b618d0feda7cf7fa909f6e
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

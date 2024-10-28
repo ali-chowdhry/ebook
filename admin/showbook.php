@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+         /* Add this style for the description column */
+         td.description {
+            white-space: pre-wrap; /* Wrap text when it reaches the cell width */
+            word-wrap: break-word; /* Ensure long words break within the cell */
+        }
         </style>
 </head>
 <body>
@@ -52,7 +56,7 @@
           echo"<td>".$row[5]."</td>";
           echo"<td>".$row[6]."</td>";
           echo"<td>".$row[8]."</td>";
-          echo"<td class='text-wrap'>".$row[9]."</td>";      
+          echo"<td class='description'>".$row[9]."</td>";      
           echo'<td><a href="updatebook.php?update='.$row[0].'"><i class="fa fa-solid fa-pencil" style="font-size: 21px;color: green;"></i></a></td>';
           echo'<td><a href="deletebook.php?delete='.$row[0].'"><i class="fa fa-solid fa-trash" style="font-size: 21px;color: red;"></i></a></td>';
         }

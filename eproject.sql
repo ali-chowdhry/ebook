@@ -1,17 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Oct 27, 2024 at 09:27 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
-=======
--- Generation Time: Oct 27, 2024 at 10:30 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
->>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
+-- Generation Time: Oct 28, 2024 at 01:42 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -45,8 +39,8 @@ CREATE TABLE `about_us` (
 --
 
 INSERT INTO `about_us` (`AboutID`, `Title`, `Description`, `Record_insert`) VALUES
-(3, '', 'saasddsadas', '2024-10-09 07:00:57'),
-(4, 'Tttgt', 'asddfasdff', '2024-10-09 07:01:21');
+(3, 'Welocme', 'At BookBuzz, we’re passionate about bringing stories to life and creating a community of book lovers. Whether you’re a seasoned reader or just starting your literary journey, you’ll find a welcoming space filled with endless possibilities.', '2024-10-09 07:00:57'),
+(4, 'About ', 'At BookBuzz, our mission is simple: to ignite a passion for reading in everyone who walks through our doors. We believe that books have the power to transport us to new worlds, inspire creativity, and connect us with diverse perspectives. Our carefully curated selection features a wide array of genres, ensuring that every visitor finds something that resonates.', '2024-10-09 07:01:21');
 
 -- --------------------------------------------------------
 
@@ -69,10 +63,9 @@ CREATE TABLE `author_info` (
 INSERT INTO `author_info` (`id`, `Name`, `Email`, `Gender`, `Age`) VALUES
 (1, 'Kamila Shamsie', 'KamilaShamsie@gmail.com', 'female', 47),
 (2, 'Mohsin Hamid', 'MohsinHamid@gmail.com', 'male', 39),
-(3, 'Ahmad Nadeem Qasmi', 'AhmadNadeemQasmi@gmail.com', 'male', 50),
+(3, 'Ahmad Nadeem Qasmi', 'AhmadNadeem@gmail.com', 'male', 50),
 (4, 'Bano Qudsia', 'BanoQudsia@gmail.com', 'female', 53),
-(5, 'Daud Kamal', 'DaudKamal@gmail.com', 'male', 49),
-(6, '', '', '', 0);
+(5, 'Daud Kamal', 'DaudKamal@gmail.com', 'male', 49);
 
 -- --------------------------------------------------------
 
@@ -100,7 +93,7 @@ CREATE TABLE `book` (
 INSERT INTO `book` (`BookID`, `Name`, `AuthorID`, `CategoryID`, `Bookimage`, `Bookprice`, `Availability`, `Rating`, `PublisherID`, `Description`) VALUES
 (4, 'Titanic', 4, 2, '../Book Images/Titanic.jfif', 500, 'yes', 4, 1, 'Margaret Anne dreams of leaving the orphanage behind, and she can hardly believe her luck when she is chosen to accompany wealth Mrs Carstairs aboard the great Titanic. But when the passengers are woken on a freezing night in April 1912, she finds herself caught up in an unimaginable nightmare…'),
 (6, 'Around the world in 80 days', 5, 10, '../Book Images/Around the world in 80 days.jpg', 320, 'yes', 5, 1, 'Around the World in Eighty Days, is an adventure novel by the French writer Jules Verne, first published in 1873. In the story, Phileas Fogg of London and his newly employed French valet Jean Passepartout, attempt to circumnavigate the world in 80 days by his friends at the Reform Club.'),
-(7, 'Harry Potter', 5, 8, '', 200, 'yes', 4, 1, 'Harry Potter is a series of novels by British author J. K. Rowling. The novels follow Harry Potter, an 11-year-old boy who discovers he is the son of famous wizards and will attend Hogwarts School of Witchcraft and Wizardry. Harry learns of an entire society of wizards and witches.'),
+(7, 'Harry Potter', 5, 8, '../Book Images\\Harry Potter', 200, 'yes', 4, 1, 'Harry Potter is a series of novels by British author J. K. Rowling. The novels follow Harry Potter, an 11-year-old boy who discovers he is the son of famous wizards and will attend Hogwarts School of Witchcraft and Wizardry. Harry learns of an entire society of wizards and witches.'),
 (8, 'the count of monte cristo', 2, 2, '../Book Images/the count of monte cristo.jfif', 800, 'yes', 3, 1, 'The Count of Monte Cristo is an adventure novel written by French author Alexandre Dumas serialized from 1844 to 1846. It is one of the author\'s most popular works, along with The Three Musketeers. Like many of his novels, it was expanded from plot outlines suggested by his collaborating ghostwriter Auguste Maquet'),
 (9, 'the haunting of hill house', 3, 7, '../Book Images/the haunting of hill house.jfif', 470, 'yes', 4, 1, 'The Haunting of Hill House is a 1959 gothic horror novel by American author Shirley Jackson. It was a finalist for the National Book Award and has been made into two feature films, a play, and is the basis of a Netflix series. The book is dedicated to Leonard Brown, Jackson\'s English teacher at Syracuse University.'),
 (10, 'the jungle book', 1, 11, '../Book Images/the jungle book.jpg', 430, 'yes', 2, 1, 'The Jungle Book by Rudyard Kipling is an adventure story about a man-cub named Mowgli. Mowgli is hunted by an evil tiger named Shere Khan. Mowgli tries to live a peaceful life with other humans, but is too wild for them and too human for the wolves. Eventually Mowgli finds a home in the jungle with a pack of his own.'),
@@ -174,7 +167,9 @@ INSERT INTO `order_table` (`ID`, `userID`, `BookID`, `Amount`, `Status`, `Addres
 (1, 1, 4, 1200, '42342', ''),
 (2, 8, 6, 4220, 'Received', 'DHA'),
 (3, 8, 9, 4090, 'Received', 'DHA'),
-(4, 8, 6, 1730, 'Received', 'new york central');
+(4, 8, 6, 1730, 'Received', 'new york central'),
+(5, 10, 4, 1770, 'Received', 'aptech'),
+(6, 9, 6, 970, 'Received', 'aptech north nazimabad');
 
 -- --------------------------------------------------------
 
@@ -194,7 +189,10 @@ CREATE TABLE `publisher` (
 --
 
 INSERT INTO `publisher` (`id`, `name`, `number`, `Address`) VALUES
-(1, 'umer', '0987456123', 'aptech');
+(1, 'umer', '0987456123', 'aptech'),
+(2, 'John Wiley', '0321456592', 'aptech'),
+(3, 'Kamila Shamsie', '03546859875', 'aptech'),
+(4, 'adeel', '365535035', 'aptech north nazimabad');
 
 -- --------------------------------------------------------
 
@@ -221,7 +219,8 @@ INSERT INTO `user` (`ID`, `Name`, `email`, `password`, `gender`, `address`, `pho
 (1, 'Adeen Shaikh', 'adeenshaikh342@gmail.com', 'tonystark', 'male', 'Nazimabad no.3 karachi', '3353472993', 'Admin'),
 (2, '', '', '', '', '', '', ''),
 (8, 'Adil', 'adil@gmail.com', 'BlackTiger287?', 'male', 'bahria', '0307-2488323', 'User'),
-(9, 'Zaidan abrar', 'zaidan@gmail.com', 'batman', 'male', 'goli maar', '030232323323', 'Admin');
+(9, 'Zaidan abrar', 'zaidan@gmail.com', 'batman', 'male', 'goli maar', '030232323323', 'Admin'),
+(10, 'alichowdhry', 'alichowdhryaptech@gmail.com', 'ali123', 'male', 'aptech', '03255895', 'User');
 
 -- --------------------------------------------------------
 
@@ -350,19 +349,19 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `order_table`
 --
 ALTER TABLE `order_table`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `publisher`
 --
 ALTER TABLE `publisher`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `website_info`

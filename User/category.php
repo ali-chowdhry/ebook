@@ -109,11 +109,45 @@ include("header.php");
                 </div>
             </div>
         </div>
-    </section>
-
-					
+    </section>				
 	</section>
+    
 
-    <?php
-    include("footer.php");
-    ?>
+<style>
+    .card {
+    background-color: #fff; /* Card background */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation effects */
+    width: 100%; /* Full width */
+    max-width: 300px; /* Max width for cards */
+    text-align: center; /* Center text in cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.btn-primary {
+    background-color: #28a745; /* Green button */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for buttons */
+    transition: background-color 0.3s; /* Transition effect */
+    margin-top: 10px; /* Space above button */
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+</style>
+
+
+<?php
+include("footer.php");
+?>

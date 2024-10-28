@@ -8,7 +8,8 @@
   <body>
 
   <?php
-  include("header.php")
+  include("header.php");
+  session_start()
   ?>
                         <div class="pcoded-inner-content">
                             <!-- Main-body start -->
@@ -215,6 +216,10 @@
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
+<<<<<<< HEAD
+                                                               
+                                                               
+=======
                                                                 <tr>
                                                                     <td>
                                                                         <div class="chk-option">
@@ -289,6 +294,7 @@
                                                                     <td>Aug, 02</td>
                                                                     <td class="text-right"><label class="label label-success">medium</label></td>
                                                                 </tr>
+>>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
                                                                 <tr>
                                                                     <td>
                                                                         <div class="chk-option">
@@ -313,6 +319,7 @@
                                                                     <td>Sep, 22</td>
                                                                     <td class="text-right"><label class="label label-primary">high</label></td>
                                                                 </tr>
+                                                                
                                                                 </tbody>
                                                             </table>
                                                             <div class="text-right m-r-20">
@@ -337,41 +344,20 @@
                                                         </div>
                                                     </div>
                                                     <div class="card-block">
+                                                        <?php 
+                                                        $query="SELECT * FROM `contact` ORDER BY `id` DESC LIMIT 5  ";
+                                                        $result=mysqli_query($conn,$query);
+                                                        while($row=mysqli_fetch_array($result))
+                                                        {
+                                                        ?>
                                                         <div class="align-middle m-b-30">
-                                                            <img src="assets/images/avatar-2.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                            <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="user image" class="img-radius img-40 align-top m-r-15">
                                                             <div class="d-inline-block">
-                                                                <h6>David Jones</h6>
-                                                                <p class="text-muted m-b-0">Developer</p>
+                                                                <h6><?php echo $row[1]; ?></h6>
+                                                                <p class="text-muted m-b-0"><?php echo $row[3]; ?></p>
                                                             </div>
                                                         </div>
-                                                        <div class="align-middle m-b-30">
-                                                            <img src="assets/images/avatar-1.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
-                                                            <div class="d-inline-block">
-                                                                <h6>David Jones</h6>
-                                                                <p class="text-muted m-b-0">Developer</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="align-middle m-b-30">
-                                                            <img src="assets/images/avatar-3.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
-                                                            <div class="d-inline-block">
-                                                                <h6>David Jones</h6>
-                                                                <p class="text-muted m-b-0">Developer</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="align-middle m-b-30">
-                                                            <img src="assets/images/avatar-4.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
-                                                            <div class="d-inline-block">
-                                                                <h6>David Jones</h6>
-                                                                <p class="text-muted m-b-0">Developer</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="align-middle m-b-10">
-                                                            <img src="assets/images/avatar-5.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
-                                                            <div class="d-inline-block">
-                                                                <h6>David Jones</h6>
-                                                                <p class="text-muted m-b-0">Developer</p>
-                                                            </div>
-                                                        </div>
+                                                    <?php } ?>
                                                         <div class="text-center">
                                                             <a href="#!" class="b-b-primary text-primary">View all Projects</a>
                                                         </div>

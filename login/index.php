@@ -1,4 +1,6 @@
-<?php include("../connection.php"); ?>
+<?php 
+session_start();
+include("../connection.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,9 +82,8 @@
             </div>
         </div>
     </section>
-</body>
-<?php
-session_start();
+    <?php
+
 if (isset($_POST["loginbtn"])) {
     $email = $_POST["email"];
     $pass = $_POST["password"];
@@ -109,7 +110,7 @@ if (isset($_POST["loginbtn"])) {
         $_SESSION["id"] = $data[0];
         $_SESSION["username"] = $data[1];
         $_SESSION["useremail"] = $data[2];
-
+    
         echo "<script>alert('Login successfully');
             window.location.href='../user/index.php'
         </script>";
@@ -121,6 +122,8 @@ if (isset($_POST["loginbtn"])) {
 }
 
 ?>
+
+</body>
 
 
 </html>

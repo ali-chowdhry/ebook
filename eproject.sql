@@ -3,9 +3,15 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
+-- Generation Time: Oct 27, 2024 at 09:27 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+=======
 -- Generation Time: Oct 27, 2024 at 10:30 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
+>>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +46,7 @@ CREATE TABLE `about_us` (
 
 INSERT INTO `about_us` (`AboutID`, `Title`, `Description`, `Record_insert`) VALUES
 (3, '', 'saasddsadas', '2024-10-09 07:00:57'),
-(4, 'aaaa', 'ccccc', '2024-10-09 07:01:21');
+(4, 'Tttgt', 'asddfasdff', '2024-10-09 07:01:21');
 
 -- --------------------------------------------------------
 
@@ -156,8 +162,19 @@ CREATE TABLE `order_table` (
   `userID` int(11) NOT NULL,
   `BookID` int(11) NOT NULL,
   `Amount` int(11) NOT NULL,
-  `Status` int(11) NOT NULL
+  `Status` varchar(11) NOT NULL DEFAULT 'Received',
+  `Address` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `order_table`
+--
+
+INSERT INTO `order_table` (`ID`, `userID`, `BookID`, `Amount`, `Status`, `Address`) VALUES
+(1, 1, 4, 1200, '42342', ''),
+(2, 8, 6, 4220, 'Received', 'DHA'),
+(3, 8, 9, 4090, 'Received', 'DHA'),
+(4, 8, 6, 1730, 'Received', 'new york central');
 
 -- --------------------------------------------------------
 
@@ -193,7 +210,7 @@ CREATE TABLE `user` (
   `gender` varchar(6) NOT NULL,
   `address` varchar(70) NOT NULL,
   `phone` varchar(15) NOT NULL,
-  `Role` varchar(30) NOT NULL
+  `Role` varchar(30) NOT NULL DEFAULT 'User'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -202,7 +219,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`ID`, `Name`, `email`, `password`, `gender`, `address`, `phone`, `Role`) VALUES
 (1, 'Adeen Shaikh', 'adeenshaikh342@gmail.com', 'tonystark', 'male', 'Nazimabad no.3 karachi', '3353472993', 'Admin'),
-(2, '', '', '', '', '', '', '');
+(2, '', '', '', '', '', '', ''),
+(8, 'Adil', 'adil@gmail.com', 'BlackTiger287?', 'male', 'bahria', '0307-2488323', 'User'),
+(9, 'Zaidan abrar', 'zaidan@gmail.com', 'batman', 'male', 'goli maar', '030232323323', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -331,7 +350,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `order_table`
 --
 ALTER TABLE `order_table`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `publisher`
@@ -343,7 +362,7 @@ ALTER TABLE `publisher`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `website_info`

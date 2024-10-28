@@ -7,7 +7,9 @@
 </head>
 <body>
     <?php include "header.php"; ?>
-    <h1>Thankyou for your order <?php include("../checkout.php"); echo "$Name"; ?></h1>
+    <h1>Thankyou for your order <?php echo $_SESSION["username"]; 
+    unset($_SESSION["mycart"]);
+    ?></h1>
 
 
     <?php include "footer.php"; ?>

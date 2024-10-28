@@ -180,7 +180,7 @@
 				  
 									</td>
 									<td>Rs. <?php echo $data[5] * $_SESSION["qty"][$i] ?></td>
-									<td><a href="delete_item_cart.php" class="btn btn-black btn-sm">X</a></td>
+									<td><a href="deletecart.php?delete=<?php echo $data[0] ?>" class="btn btn-black btn-sm">X</a></td>
 								  </tr>
 								  
 				  

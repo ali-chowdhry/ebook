@@ -8,13 +8,13 @@ session_start();
 <head>
 <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Active Bootstrap Template</title>
+  <title></title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../Book Images\Logo.mp4" rel="icon">
+  <link href="../Book Images\Logo.mp4" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -30,6 +30,13 @@ session_start();
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+>>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
+>>>>>>> 645a841c6e25683356b618d0feda7cf7fa909f6e
 
 </head>
 <body class="index-page">
@@ -37,11 +44,19 @@ session_start();
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
+<<<<<<< HEAD
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Active.</h1>
       </a>
+=======
+    <a href="index.php">
+    <img src="../Book Images\Logo.png" alt="" width="150" height="150"> 
+    <h1><a href="index.php">Books Store</a></h1>
+</a>
+
+>>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
 
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -51,6 +66,7 @@ session_start();
           <li><a href="Author.php">Author</a></li>
           <li><a href="Publisher.php">Publisher</a></li>
        
+<<<<<<< HEAD
           <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
@@ -71,6 +87,43 @@ session_start();
           <li><a href="contact.php">Contact</a></li>
           <li><a href="cart.php"><i class="bi bi-cart" ></i></a></li>
           
+=======
+          <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+         
+
+          <?php 
+         
+      
+          $fetch_query = "SELECT * FROM `category` ORDER BY `category_name` aSC   ;  " ;
+          $result = mysqli_query($conn, $fetch_query);
+          if ($result) {
+            while ($row = mysqli_fetch_array($result)) {
+          ?>
+         
+              <li><a href="Category.php?id=<?php echo $row[0]; ?>"><?php echo $row[1]; ?></a></li>
+              
+           
+            <?php 
+          }
+        } else {
+          echo "<p>No books found.</p>";
+        }
+       ?>
+           </ul>
+          <li><a href="contact.php">Contact</a></li>
+          <li><a href="cart.php"><i class="bi bi-cart" height="50px" width="20px"; ></i></a></li>
+          <?php
+            if(isset($_SESSION["username"])){ ?>
+               <li><a href="#"><?php echo $_SESSION["username"]?></a></li>
+          <li><a href="logout.php"><i class="bi bi-box-arrow-left" height="50px" width="20px"; ></i></a></li>
+ <?php     }
+else{ ?>
+          <li><a href="../login/index.php"><i class="bi bi-box-arrow-in-right" height="50px" width="20px"; ></i></a></li>
+
+<?php }
+          ?>
+>>>>>>> 645a841c6e25683356b618d0feda7cf7fa909f6e
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

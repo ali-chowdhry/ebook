@@ -1,7 +1,10 @@
 <?php
 session_start();
+if(!isset($_SESSION["username"])){
+        header("location: ../login/index.php");
+}
 
-
+else{
 if (isset($_POST["btn"])) {
     $id = $_POST["pro_id"];
     $quantity = intval($_POST["qty"]);
@@ -25,4 +28,5 @@ if (isset($_POST["btn"])) {
 } else {
     header("location: Featured.php");
     exit();
+}
 }

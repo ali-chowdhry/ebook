@@ -16,10 +16,10 @@ include("header.php");
             <h1>Checkout</h1>
         <form action="" method="POST">
         <label>Name:</label>
-        <input type="text" name="name" placeholder="Enter your name" class="form-control" required>
+        <input type="text" name="name" placeholder="Enter your name" class="form-control" value="<?php echo $_SESSION["username"]; ?>" required>
         <br>
         <label>Email:</label>
-        <input type="email" name="email" placeholder="Enter your email" class="form-control" required>
+        <input type="email" name="email" placeholder="Enter your email" class="form-control" value="<?php echo $_SESSION["useremail"]; ?>" required>
         <br>
         <label>Phone:</label>
         <input type="tel" name="phone" placeholder="Enter your phone" class="form-control" required>
@@ -79,12 +79,14 @@ include("header.php");
 <br>
 <?php
 if(isset($_POST["btn"])){
-$Name = $_POST["name"];
-$Email = $_POST["email"];
-$Phone = $_POST["phone"];
 $Address = $_POST["address"];
+$userid= $_SESSION["id"];
+$bookid = implode(",",$_SESSION["mycart"]);;
+$amount =  $_SESSION["total_price"];
 
-
+$query = "INSERT INTO `order_table`(`userID`, `BookID`, `Amount`,  `Address`) 
+VALUES ('$userid','$bookid','$amount','$Address')";
+$result=mysqli_query($conn,$query);
 echo "
 <script>
     window.location.href='placeorder.php';

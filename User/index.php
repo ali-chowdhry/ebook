@@ -196,7 +196,7 @@ window.onresize = function(event) {
 <h1 style="text-align: center; color: green;">Publisher</h1>
 <div class="publisher-container">
   <?php
-  $query = "SELECT * FROM publisher ORDER BY id DESC";
+  $query = "SELECT * FROM publisher ORDER BY id DESC limit 3";
   $result = mysqli_query($conn, $query);
   while ($row = mysqli_fetch_array($result)) { ?>
     <div class="swiper-slide team">
@@ -210,8 +210,24 @@ window.onresize = function(event) {
     </div>
   <?php } ?>
 </div>
+<br>
+<h1 style="text-align: center; color: green;">Category</h1>
+<div class="publisher-container">
+  <?php
+  $query = "SELECT * FROM category ORDER BY Catid DESC limit 3";
+  $result = mysqli_query($conn, $query);
+  while ($row = mysqli_fetch_array($result)) { ?>
+    <div class="swiper-slide team">
+      <div class="pic">
+        <img src="https://icons.veryicon.com/png/o/miscellaneous/category-icon-set/category-56.png" alt="Image" class="img-fluid">
+      </div>
+      <h3>
+        <a href="#"><span><?php echo $row[1]; ?></span></a>
+      </h3>
 
-
+    </div>
+  <?php } ?>
+</div>
 
 	<section id="best-selling" class="leaf-pattern-overlay">
     <div class="corner-pattern-overlay"></div>
@@ -265,15 +281,15 @@ window.onresize = function(event) {
                         <?php 
                         // Prepare the query based on search input
                         $search = isset($_GET['Search']) ? mysqli_real_escape_string($conn, $_GET['Search']) : '';
-                        $fetch_query = "SELECT * FROM `book`" . ($search ? " WHERE Name LIKE '%$search%'" : "");
+                        $fetch_query = "SELECT * FROM `book` limit 3" ;
                         $result = mysqli_query($conn, $fetch_query);
                     ?>
                 <div class="product-list" data-aos="fade-up">
                     <div class="row">
                         <?php 
                         // Prepare the query based on search input
-                        $search = isset($_GET['Search']) ? mysqli_real_escape_string($conn, $_GET['Search']) : '';
-                        $fetch_query = "SELECT * FROM `book`" . ($search ? " WHERE Name LIKE '%$search%'" : "");
+                       
+                        $fetch_query = "SELECT * FROM `book` limit 3" ;
                         $result = mysqli_query($conn, $fetch_query);
 
                         if ($result) {
@@ -308,7 +324,7 @@ window.onresize = function(event) {
 					<div class="product-list" data-aos="fade-up">
 						<div class="row">
 						<?php 
-						$fetch_query = mysqli_query($conn, "SELECT * FROM `book`");
+						$fetch_query = mysqli_query($conn, "SELECT * FROM `book` limit 3");
 						while ($data = mysqli_fetch_array($fetch_query))
 						{ ?>
 						<div class="col-md-3">
@@ -345,42 +361,6 @@ window.onresize = function(event) {
 
 
 
-	<section id="subscribe">
-		<div class="container">
-			<div class="row justify-content-center">
-
-				<div class="col-md-8">
-					<div class="row">
-
-						<div class="col-md-6">
-
-							<div class="title-element">
-								<h2 class="section-title divider">Subscribe to our newsletter</h2>
-							</div>
-
-						</div>
-						<div class="col-md-6">
-
-							<div class="subscribe-content" data-aos="fade-up">
-								<p>Sed eu feugiat amet, libero ipsum enim pharetra hac dolor sit amet, consectetur. Elit
-									adipiscing enim pharetra hac.</p>
-								<form id="form">
-									<input type="text" name="email" placeholder="Enter your email addresss here">
-									<button class="btn-subscribe">
-										<span>send</span>
-										<i class="icon icon-send"></i>
-									</button>
-								</form>
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
 
 	
     <style>
@@ -615,6 +595,4 @@ document.addEventListener("DOMContentLoaded", function() {
 	<?php 
 	include("footer.php");
 	?>
-</body>
 
-</html>

@@ -56,21 +56,44 @@ include("header.php");
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+<<<<<<< HEAD
                 5
+=======
+>>>>>>> 645a841c6e25683356b618d0feda7cf7fa909f6e
 		<div class="container">
 			<div class="row">
 				
 				<div class="col-md-12">
 
 =======
+<<<<<<< HEAD
 >>>>>>> 2dc21c1374a52d8671c75023dc177306b04d2f0e
+=======
+>>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
+>>>>>>> 645a841c6e25683356b618d0feda7cf7fa909f6e
                 <div class="product-list" data-aos="fade-up">
                     <div class="row">
                         <?php 
                         // Prepare the query based on search input
                         $search = isset($_GET['Search']) ? mysqli_real_escape_string($conn, $_GET['Search']) : '';
-                        $fetch_query = "SELECT * FROM `book`" . ($search ? " WHERE Name LIKE '%$search%'" : "");
+                        $fetch_query = "SELECT * FROM `book`" . ($search ? " WHERE Name LIKE '%$search%'" : "") ;
                         $result = mysqli_query($conn, $fetch_query);
+<<<<<<< HEAD
+                    ?>
+               
+<?php
+                        if ($result) {
+                            while ($row = mysqli_fetch_array($result)) { ?>
+                                <div class="mt-4 col-md-4">
+                                <div class="card" style="width: 18rem;">
+  <img src="<?php echo $row[4]; ?>" class="card-img-top" alt="..." height="250px">
+  <div class="card-body">   
+    <h5 class="card-title"><?php echo $row[1]; ?></h5>
+    <p class="card-text"> Rs. <?php echo $row[5]; ?></p>
+    <a href="bookdescription.php?b=<?php echo $row[0]; ?>" class="btn btn-primary">Add to cart </a>
+  </div>
+</div>
+=======
                         
                         if ($result) {
                             while ($row = mysqli_fetch_array($result)) { ?>
@@ -83,6 +106,7 @@ include("header.php");
                                             <a href="bookdescription.php?b=<?php echo $row[0]; ?>" class="btn btn-primary">Add to cart</a>
                                         </div>
                                     </div>
+>>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
                                 </div>
                             <?php } 
                         } else {
@@ -149,6 +173,16 @@ include("header.php");
 =======
             </div>
         </div>
+<<<<<<< HEAD
+    </section>
+
+					
+	</section>
+
+    <?php
+    include("footer.php");
+    ?>
+=======
     </div>
 </section>
 
@@ -286,4 +320,8 @@ body {
 <?php
 include("footer.php");
 ?>
+<<<<<<< HEAD
 >>>>>>> 2dc21c1374a52d8671c75023dc177306b04d2f0e
+=======
+>>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
+>>>>>>> 645a841c6e25683356b618d0feda7cf7fa909f6e

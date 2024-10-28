@@ -54,53 +54,26 @@
             <h3 class="widget-heading">Connect</h3>
             <ul class="list-unstyled social-icons light mb-3">
               <li>
-                <a href="#"><span class="bi bi-facebook"></span></a>
+                <a href="https://www.facebook.com/" target="_blank"><span class="bi bi-facebook"></span></a>
               </li>
               <li>
-                <a href="#"><span class="bi bi-twitter-x"></span></a>
+                <a href="https://www.instagram.com/accounts/login/" target="_blank"><span class="bi bi-instagram"></span></a>
               </li>
               <li>
-                <a href="#"><span class="bi bi-linkedin"></span></a>
+                <a href="https://pk.linkedin.com/" target="_blank"><span class="bi bi-linkedin"></span></a>
               </li>
               <li>
-                <a href="#"><span class="bi bi-google"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="bi bi-google-play"></span></a>
+                <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1812573153%3A1655944654029516&flowEntry=ServiceLogin&flowName=WebLiteSignIn&ifkv=AX3vH39E0iYVTmn-NoMNM_C35EPrno8LWsRx2Qhr0HApkVLZ-Zc_Vql8ouaSQOiXzEmthrpOPAV5" target="_blank"><span class="bi bi-google"></span></a>
               </li>
             </ul>
           </div>
 
-          <div class="widget">
-            <div class="footer-subscribe">
-              <h3 class="widget-heading">Subscribe</h3>
-              <form action="forms/newsletter.php" method="post" class="php-email-form">
-                <div class="mb-2">
-                  <input type="text" class="form-control" name="email" placeholder="Enter your email">
-
-                  <button type="submit" class="btn btn-link">
-                    <span class="bi bi-arrow-right"></span>
-                  </button>
-                </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your subscription request has been sent. Thank you!
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+         
 
       <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Active.</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Books Store.</strong> <span>All Rights Reserved</span></p>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          
         </div>
       </div>
     </div>

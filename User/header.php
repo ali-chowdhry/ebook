@@ -53,15 +53,26 @@ session_start();
        
           <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
-         <?php
+         
           
+      
+          <li><a href="cart.php"> <i class="fas fa-shopping-cart"></i></a></li>
+          <?php 
+          if(isset($_SESSION["username"])){ ?>
+          <li><a href="#"><?php echo $_SESSION["username"]; ?></a></li>
+          <li><a href="logout.php"><i class="fa fa-sign-out"></i></a></li>
+        <?php } else {?>  
+
+          <li><a href="../login/index.php"> <i class="fa-solid fa-user"></i></a></li>
+        
+          <?php 
           $fetch_query = "SELECT * FROM `category`";
           $result = mysqli_query($conn, $fetch_query);
           if ($result) {
             while ($row = mysqli_fetch_array($result)) {
           ?>
          
-              <li><a href="#"><?php echo $row[1]; ?></a></li>
+              <li><a href="category.php"><?php echo $row[1]; ?></a></li>
               
            
             <?php 
@@ -69,7 +80,7 @@ session_start();
         } else {
           echo "<p>No books found.</p>";
         }
-          ?>
+       } ?>
            </ul>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="cart.php"><i class="bi bi-cart" height="50px" width="20px"; ></i></a></li>

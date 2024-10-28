@@ -26,11 +26,11 @@
 					</div>
 					<div class="form-holder">
 						<span class="lnr lnr-phone-handset"></span>
-						<input type="text" name="phoneno" class="form-control" placeholder="Phone Number" pattern="^0307-\d{7}$" required>
+						<input type="text" name="phoneno" class="form-control" placeholder="Phone Number" pattern="^0-\d{7}$" required>
 					</div>
 					<div class="form-holder">
 						<span class="lnr lnr-envelope"></span>
-						<input type="text" name="email" class="form-control" placeholder="Email" required>
+						<input type="email" name="email" class="form-control" placeholder="Email" required>
 					</div>
 					<div class="form-holder">
 						<span class="lnr lnr-home"></span>

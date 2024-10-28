@@ -58,7 +58,7 @@ include("header.php");
               <div class="swiper-slide">
                 <div class="team">
                   <div class="pic">
-                    <img src="assets/img/team/team-1.jpg" alt="Image" class="img-fluid">
+                    <img src="../Publisher Images\pic1.jpg" alt="Image" class="img-fluid">
                   </div>
                   <h3 clas="">
                     <a href="#"><span class=""><?php echo $row[1]; ?></a>

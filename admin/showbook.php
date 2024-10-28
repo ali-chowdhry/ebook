@@ -10,6 +10,14 @@
             white-space: pre-wrap; /* Wrap text when it reaches the cell width */
             word-wrap: break-word; /* Ensure long words break within the cell */
         }
+        td.name {
+            white-space: pre-wrap; /* Wrap text when it reaches the cell width */
+            word-wrap: break-word; /* Ensure long words break within the cell */
+        }
+        td.author {
+            white-space: pre-wrap; /* Wrap text when it reaches the cell width */
+            word-wrap: break-word; /* Ensure long words break within the cell */
+        }
         </style>
 </head>
 <body>
@@ -48,10 +56,10 @@
 
           echo"<tr>";
           echo"<td>".$row[0]."</td>"; 
-          echo"<td>".$row[1]."</td>"; 
+          echo"<td  class='name'>".$row[1]."</td>"; 
           echo"<td>".$fetchcategory[1]."</td>"; 
           echo"<td>".$fetchpublisher[1]."</td>"; 
-          echo"<td>".$fetchauthor[1]."</td>";
+          echo"<td class='author'>".$fetchauthor[1]."</td>";
           echo"<td><img src='".$row[4]." ' height='100' width='100'></td>";  
           echo"<td>".$row[5]."</td>";
           echo"<td>".$row[6]."</td>";

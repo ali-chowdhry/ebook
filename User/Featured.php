@@ -56,13 +56,21 @@ include("header.php");
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+<<<<<<< HEAD
+                5
+=======
+>>>>>>> 645a841c6e25683356b618d0feda7cf7fa909f6e
 		<div class="container">
 			<div class="row">
 				
 				<div class="col-md-12">
 
 =======
+<<<<<<< HEAD
+>>>>>>> 2dc21c1374a52d8671c75023dc177306b04d2f0e
+=======
 >>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
+>>>>>>> 645a841c6e25683356b618d0feda7cf7fa909f6e
                 <div class="product-list" data-aos="fade-up">
                     <div class="row">
                         <?php 
@@ -101,10 +109,68 @@ include("header.php");
 >>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
                                 </div>
                             <?php } 
+                        } else {
+                            echo "<p>No books found.</p>";
                         }
                         ?>
                     </div>
                 </div>
+<<<<<<< HEAD
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="btn-wrap align-right">
+                            <a href="#" class="btn-accent-arrow">View all products <i class="icon icon-ns-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 860d28faab50408ba3adbc46b6ac7b9735ec44c5
+					<div class="product-list" data-aos="fade-up">
+						<div class="row">
+						<?php 
+						$fetch_query = mysqli_query($conn, "SELECT * FROM `book`");
+						while ($data = mysqli_fetch_array($fetch_query))
+						{ ?>
+						<div class="col-md-3">
+								<div class="product-item">
+									<figure class="product-style">
+										<img src="<?php echo $data[4]; ?>" alt="Books" height="120px" width="120px" class="product-item">
+										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
+											Cart</button>
+									</figure>
+									<figcaption>
+										<h3 class="book-title"><?php echo $data[1] ?></h3>
+										<div class="item-price">Rs.<?php echo  $data[5] ?></div>
+									</figcaption>
+								</div>
+							</div> 
+
+							<?php } ?>
+
+
+
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="btn-wrap align-right">
+						<a href="#" class="btn-accent-arrow">View all products <i
+								class="icon icon-ns-arrow-right"></i></a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+>>>>>>> 26b5ac32f33838b11ebd7a2aabbd2609eda2ed2b
+    <?php
+    include("footer.php");
+    ?>
+=======
             </div>
         </div>
 <<<<<<< HEAD
@@ -254,4 +320,8 @@ body {
 <?php
 include("footer.php");
 ?>
+<<<<<<< HEAD
+>>>>>>> 2dc21c1374a52d8671c75023dc177306b04d2f0e
+=======
 >>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
+>>>>>>> 645a841c6e25683356b618d0feda7cf7fa909f6e

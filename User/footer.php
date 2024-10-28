@@ -23,15 +23,23 @@
           <div class="widget">
             <h3 class="widget-heading">Navigation</h3>
             <ul class="list-unstyled float-start me-5">
-              <li><a href="index.php">Home</a></li>
-              <li><a href="about.php">About Us</a></li>
-              <li><a href="contact.php">Contact</a></li>
+<<<<<<< HEAD
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Find Buyers</a></li>
             </ul>
-            
-              <li><a href="Featured.php">Shop</a></li>
+            <ul class="list-unstyled float-start">
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+=======
               <li><a href="Publisher.php">publisher</a></li>
+              <li><a href="about.php">About Us</a></li>
               <li><a href="Author.php">Author</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>     
+>>>>>>> 860d28faab50408ba3adbc46b6ac7b9735ec44c5
           </div>
         </div>
         <div class="col-md-6 col-lg-3 pl-lg-5">

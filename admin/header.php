@@ -1,4 +1,7 @@
-<?php include("../connection.php") ?>
+<?php include("../connection.php") ;
+session_start()
+?>
+
 <title>Mega Able bootstrap admin template by codedthemes </title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -160,7 +163,7 @@
                                       <div class="media">
                                           <img class="d-flex align-self-center img-radius" src="assets/images/avatar-2.jpg" alt="Generic placeholder image">
                                           <div class="media-body">
-                                              <h5 class="notification-user">John Doe</h5>
+                                              <h5 class="notification-user">jhon doe</h5>
                                               <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
                                               <span class="notification-time">30 minutes ago</span>
                                           </div>
@@ -298,9 +301,9 @@
                               </li>
                               <br>
                               <li class="active">
-                                  <a href="index.php" class="waves-effect waves-dark">
+                                  <a href="showorder.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="fa fa-info-circle"></i><b></b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Website info</span>
+                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Show Order</span>
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                               </li>
@@ -314,7 +317,7 @@
                               </li>
                               <br>
                               <li class="active">
-                                  <a href="index.php" class="waves-effect waves-dark">
+                                  <a href="showcontact.php" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="fa fa-comments"></i><b></b></span>
                                       <span class="pcoded-mtext" data-i18n="nav.dash.main">Contact</span>
                                       <span class="pcoded-mcaret"></span>

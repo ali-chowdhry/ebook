@@ -68,25 +68,27 @@
 								while ($data=mysqli_fetch_array($run)) { ?>
 									<tr>
 									<td class="product-thumbnail">
-									  <img src="../Admin/<?php echo $data[4]; ?>" alt="Image" class="img-fluid">
+									  <img src="../Admin/<?php echo $data[4]; ?>" height="100px" width="150px" alt="Image" class="img-fluid">
 									</td>
 									<td class="product-name">
 									  <h2 class="h5 text-black"><?php echo $data[1]; ?></h2>
 									</td>
-									<td> Rs. <?php echo $data[2]; ?></td>
+									<td> Rs. <?php echo $data[5]; ?></td>
 									<td>
-									  <?php echo  $_SESSION["qty"][$i]; ?>
+									  <?php echo $_SESSION ["qty"][$i]; ?>
 				  
 									</td>
-									<td>Rs. <?php echo $data[2] * $_SESSION["qty"][$i] ?></td>
+									<td>Rs. <?php echo $data[5] * $_SESSION["qty"][$i] ?></td>
 									<td><a href="delete_item_cart.php" class="btn btn-black btn-sm">X</a></td>
 								  </tr>
 								  
 				  
 						<?php	
-						$total = 	$data[2] * $_SESSION["qty"][$i] + $total;		
+						$total = 	$data[5] * $_SESSION["qty"][$i] + $total;		
            
 						$i++;
+
+            $_SESSION["total_price"] = $total;
 					}
 							} else { ?>
 								<tr>
@@ -107,7 +109,7 @@
                   <div class="row mb-5">
                     
                     <div class="col-md-6">
-                      <a class="btn btn-outline-black btn-sm btn-block" href="Featured.php">Continue Shopping</a>
+                      <a class="btn btn-success" href="Featured.php">Continue Shopping</a>
                     </div>
                   </div>            
                 </div>
@@ -132,7 +134,7 @@
                           <span class="text-black">Shipping</span>
                         </div>
                         <div class="col-md-6 text-right">
-                          <strong class="text-black">Rs. 150</strong>
+                          <strong class="text-black">Rs.150</strong>
                         </div>
                       </div>
 					  <hr>
@@ -149,7 +151,7 @@
         
                       <div class="row">
                         <div class="col-md-12">
-                          <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='checkout.php'">Proceed To Checkout</button>
+                          <button class="btn btn-secondary btn-lg py-3 btn-block" onclick="window.location='checkout.php'">Proceed To Checkout</button>
                         </div>
                       </div>
                     </div>
@@ -158,7 +160,7 @@
               </div>
             </div>
           </div>
-		
+		<br> 
 		  <?php include "footer.php" ?>
 
 	</body>

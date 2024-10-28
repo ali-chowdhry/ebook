@@ -22,11 +22,11 @@
 					<h3>New Account?</h3>
 					<div class="form-holder">
 						<span class="lnr lnr-user"></span>
-						<input type="text" name="uname" class="form-control" placeholder="Username" pattern="^[a-zA-Z][a-zA-Z]*$" required>
+						<input type="text" name="uname" class="form-control" placeholder="Username"  required>
 					</div>
 					<div class="form-holder">
 						<span class="lnr lnr-phone-handset"></span>
-						<input type="text" name="phoneno" class="form-control" placeholder="Phone Number" pattern="^0-\d{7}$" required>
+						<input type="number" name="phoneno" class="form-control" placeholder="Phone Number" required>
 					</div>
 					<div class="form-holder">
 						<span class="lnr lnr-envelope"></span>
@@ -44,8 +44,7 @@
 						<br><br>
 					<div class="form-holder">
 						<span class="lnr lnr-eye"></span>
-						<input type="password" name="pass" class="form-control" placeholder=" Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
-               required>
+						<input type="password" name="pass" class="form-control" placeholder=" Password"  required>
 					</div>
 					<button type="submit" name="btn">
 						<span>Register</span>

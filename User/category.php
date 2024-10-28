@@ -72,13 +72,13 @@ include("header.php");
                     <div class="row">
                         <?php 
                         // Prepare the query based on search input
-                        $search = isset($_GET['Search']) ? mysqli_real_escape_string($conn, $_GET['Search']) : '';
-                        $fetch_query = "SELECT * FROM `book`" . ($search ? " WHERE Name LIKE '%$search%'" : "") ;
+                        $id = $_GET['id']??"";
+                        $fetch_query = "SELECT * FROM `book` WHERE Categoryid = $id" ;
                         $result = mysqli_query($conn, $fetch_query);
                     ?>
                
 <?php
-                        if ($result) {
+                        if (mysqli_num_rows($result)>0) {
                             while ($row = mysqli_fetch_array($result)) { ?>
                                 <div class="mt-4 col-md-4">
                                 <div class="card" style="width: 18rem;">
@@ -91,7 +91,11 @@ include("header.php");
 </div>
                                 </div>
                             <?php } 
-                        }
+                        } else {?>
+<div class="alert alert-danger" role="alert">
+ No book found in this category
+</div>
+                    <?php    }
                         
 
                         ?>

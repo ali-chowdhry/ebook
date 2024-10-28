@@ -12,6 +12,10 @@
     <?php include "header.php"?>
     <br><br>
     <div class="container">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <a href="author.php"class="btn btn-primary">Insert</a>
+    </div>
+    <br><br>
       <h1>AUTHOR</h1>
       <table class="table table-bordered">
         <tr>

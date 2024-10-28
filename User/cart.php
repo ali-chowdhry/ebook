@@ -9,6 +9,107 @@
 <html lang="en">
 <head>
   
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4; /* Light background for contrast */
+    }
+
+    .hero {
+        background: url('path/to/your/hero-image.jpg') no-repeat center center; /* Example background image */
+        background-size: cover;
+        padding: 60px 0;
+        text-align: center;
+        color: white;
+    }
+
+    .intro-excerpt h1 {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+
+    .untree_co-section {
+        padding: 40px 0;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: #fff; /* White background for table */
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .table th, .table td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table th {
+        background-color: #f8f8f8;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f1f1f1; /* Hover effect for rows */
+    }
+
+    .btn {
+        background-color: #007bff; /* Bootstrap primary color */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+        transform: scale(1.05); /* Slightly increase size on hover */
+    }
+
+    .btn-success {
+        background-color: #28a745; /* Green for continue shopping */
+    }
+
+    .btn-success:hover {
+        background-color: #218838; /* Darker green on hover */
+    }
+
+    .btn-secondary {
+        background-color: #6c757d; /* Gray for checkout */
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268; /* Darker gray on hover */
+    }
+
+    .text-black {
+        color: #333;
+    }
+
+    .border-bottom {
+        border-bottom: 2px solid #007bff; /* Blue border for emphasis */
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            padding: 30px 0;
+        }
+
+        .intro-excerpt h1 {
+            font-size: 2rem;
+        }
+    }
+</style>
+
 	</head>
 
 	<body>

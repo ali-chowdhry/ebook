@@ -50,7 +50,8 @@
      <input type="file" name="pro_image" accept="image/*">
     <br>
     <label>Book Price:</label>
-    <input type="text" name="bookprice" placeholder="Enter your book price" class="form-control" required>
+    <input type="text" name="bookprice" placeholder="Enter your book price" class="form-control" \b(1[0-9]{2,}|[2-9][0-9]{2,}|[1-9][0-9]{1,})\b
+ required>
     <br>
     <label>Availability:</label>
     <input type="radio" name="availability" value="yes" required>yes

@@ -8,13 +8,13 @@ session_start();
 <head>
 <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Active Bootstrap Template</title>
+  <title></title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../Book Images\Logo.mp4" rel="icon">
+  <link href="../Book Images\Logo.mp4" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -30,6 +30,10 @@ session_start();
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+<<<<<<< HEAD
+=======
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+>>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
 
 </head>
 <body class="index-page">
@@ -37,11 +41,19 @@ session_start();
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
+<<<<<<< HEAD
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Active.</h1>
       </a>
+=======
+    <a href="index.php">
+    <img src="../Book Images\Logo.png" alt="" width="150" height="150"> 
+    <h1><a href="index.php">Books Store</a></h1>
+</a>
+
+>>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
 
       <nav id="navmenu" class="navmenu">
         <ul>

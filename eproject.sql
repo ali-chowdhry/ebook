@@ -3,9 +3,15 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Oct 27, 2024 at 09:27 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
+=======
+-- Generation Time: Oct 27, 2024 at 10:30 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
+>>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -124,6 +130,26 @@ INSERT INTO `category` (`CatID`, `category_name`, `record_insert`) VALUES
 (9, 'Actions', '2024-10-09 07:05:45'),
 (10, 'Adventure', '2024-10-13 19:43:21'),
 (11, 'Comedy', '2024-10-13 19:43:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `Name` varchar(50) NOT NULL,
+  `Email` varchar(80) NOT NULL,
+  `Message` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `Name`, `Email`, `Message`) VALUES
+(1, 'zaidan', 'zaidan@gmail.com', 'hogya kam');
 
 -- --------------------------------------------------------
 
@@ -252,6 +278,12 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`CatID`);
 
 --
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `order_table`
 --
 ALTER TABLE `order_table`
@@ -307,6 +339,12 @@ ALTER TABLE `book`
 --
 ALTER TABLE `category`
   MODIFY `CatID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `order_table`

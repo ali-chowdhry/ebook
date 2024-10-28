@@ -216,8 +216,85 @@
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
+<<<<<<< HEAD
                                                                
                                                                
+=======
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="chk-option">
+                                                                            <div class="checkbox-fade fade-in-primary">
+                                                                                <label class="check-task">
+                                                                                    <input type="checkbox" value="">
+                                                                                    <span class="cr">
+                                                                                                <i class="cr-icon fa fa-check txt-default"></i>
+                                                                                            </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="d-inline-block align-middle">
+                                                                            <img src="assets/images/avatar-4.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                                            <div class="d-inline-block">
+                                                                                <h6><?php $q= "SELECT * FROM `user` WHERE 1";
+                                                                                    echo ".$a[1].";
+                                                                                ?></h6>
+                                                                                <p class="text-muted m-b-0">Graphics Designer</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>Able Pro</td>
+                                                                    <td>Jun, 26</td>
+                                                                    <td class="text-right"><label class="label label-danger">Low</label></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="chk-option">
+                                                                            <div class="checkbox-fade fade-in-primary">
+                                                                                <label class="check-task">
+                                                                                    <input type="checkbox" value="">
+                                                                                    <span class="cr">
+                                                                                                <i class="cr-icon fa fa-check txt-default"></i>
+                                                                                            </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="d-inline-block align-middle">
+                                                                            <img src="assets/images/avatar-5.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                                            <div class="d-inline-block">
+                                                                                <h6>Jenifer Vintage</h6>
+                                                                                <p class="text-muted m-b-0">Web Designer</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>Mashable</td>
+                                                                    <td>March, 31</td>
+                                                                    <td class="text-right"><label class="label label-primary">high</label></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="chk-option">
+                                                                            <div class="checkbox-fade fade-in-primary">
+                                                                                <label class="check-task">
+                                                                                    <input type="checkbox" value="">
+                                                                                    <span class="cr">
+                                                                                                <i class="cr-icon fa fa-check txt-default"></i>
+                                                                                            </span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="d-inline-block align-middle">
+                                                                            <img src="assets/images/avatar-3.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                                            <div class="d-inline-block">
+                                                                                <h6>William Jem</h6>
+                                                                                <p class="text-muted m-b-0">Developer</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>Flatable</td>
+                                                                    <td>Aug, 02</td>
+                                                                    <td class="text-right"><label class="label label-success">medium</label></td>
+                                                                </tr>
+>>>>>>> 9297fce087122641c0d2d3a38ce8682e18707c06
                                                                 <tr>
                                                                     <td>
                                                                         <div class="chk-option">

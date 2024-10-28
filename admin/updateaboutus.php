@@ -31,9 +31,9 @@ if(isset($_POST["btn"])){
 $title = $_POST["title"];
 $description = $_POST["description"];
 
-$q = "UPDATE `about_us` SET `Title`='$title',`Description`='$description'WHERE AboutID = $i";
+$query = "UPDATE `about_us` SET `Title`='$title',`Description`='$description'WHERE AboutID = $i";
 
-if(mysqli_query($conn, $q)){
+if(mysqli_query($conn, $query)){
     echo "
     <script>
     alert('About us updated successfully');
